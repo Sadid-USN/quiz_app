@@ -1,0 +1,64 @@
+{
+    "id": "ppr002",
+    "title": "Ислам",
+    "image": "",
+    "time_seconds": "900",
+    "description": "Узнай об Исламе больше",
+
+    "questions" : [
+
+      {
+          "id": "0",
+          "question": "Из скольки столпов состит Ислам?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Ислам состои из 5 столпов"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Ислам состои из 6 столпов"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Ислам состои из 8 столпов"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Ислам состои из 4 столпов"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "1",
+          "question": "Какой самый большой грех в Исламе?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Воровство"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Ругательство"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Ширк (большое многобожие)"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Клевета"
+           }
+          ],
+
+          "correct_answer": "C"
+      }
+    ]
+  }

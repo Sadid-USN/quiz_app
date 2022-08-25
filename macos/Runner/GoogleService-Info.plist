@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDdbDDb3Gm8yds9LVTL7oeE9_j3CmU3hYc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1098795874442</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.quizapp</string>
+	<key>PROJECT_ID</key>
+	<string>quizapp-95cbd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quizapp-95cbd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1098795874442:ios:a9f704eb3a52f65bfc1573</string>
+</dict>
+</plist>

@@ -1,0 +1,64 @@
+{
+  "id": "ppr001",
+  "title": "English",
+  "image": "",
+  "time_seconds": "900",
+  "description": "Разговорный английский, общайся как носители!",
+
+  "questions" : [
+
+    {
+        "id": "0",
+        "question": "Как будет на английском Это не твоё дело?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "Your aint this business"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "Your business aint this"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "this aint your business"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "this is my business"
+         }
+        ],
+        "correct_answer": "C"
+    },
+    {
+        "id": "1",
+        "question": "Как будет на английском Заикаться?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "Stutter if you have stutter don't worry, it's curable"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "Stuff this is cool stuff"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "Saturn The distance from the Earth to the planet Saturn varies from 1195 million km to 1660 million km."
+         },
+         {
+            "identifier" : "D",
+            "answer" : "Simpsons, Simpsons funny cartoon series"
+         }
+        ],
+
+        "correct_answer": "A"
+    }
+  ]
+}
