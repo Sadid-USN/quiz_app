@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
+import 'package:quizapp/screens/Login/login_screen.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:quizapp/screens/introduction/introduction.dart';
 import 'package:quizapp/screens/splash/splash_screen.dart';
@@ -14,6 +15,10 @@ class Routes {
         GetPage(
           name: '/introduction',
           page: () => const IntroductionScreen(),
+        ),
+        GetPage(
+          name: LoginScreen.routeName,
+          page: () => const LoginScreen(),
         ),
         GetPage(
             name: '/home',

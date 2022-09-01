@@ -20,7 +20,7 @@ class Dialogs {
             style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
           ),
           Text(
-            'Пожалуйста войдите в систему, прежде чем начать',
+            'Пожалуйста зарегистрируйтесь, прежде чем начать игру',
             style: TextStyle(
               fontSize: 18.0,
             ),

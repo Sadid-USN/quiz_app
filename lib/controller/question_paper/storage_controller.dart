@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/controller/auth_controller.dart';
@@ -11,6 +12,23 @@ import 'package:url_launcher/url_launcher.dart';
 class FirebaseStorageController extends GetxController {
   //FirebaseStorageController controller = Get.put(FirebaseStorageController());
   final zoomDrawerController = ZoomDrawerController();
+  GlobalKey<FormState> signUpFormstate = GlobalKey<FormState>();
+  // late TextEditingController loginEmail;
+  // late TextEditingController loginPassword;
+  bool isShowPassword = true;
+
+  showPassword() {
+    isShowPassword = isShowPassword == true ? false : true;
+    update();
+  }
+
+  signUp() {
+    if (signUpFormstate.currentState!.validate()) {
+      print('Validate');
+    } else {
+      print('not Valid');
+    }
+  }
 
   @override
   void onReady() {

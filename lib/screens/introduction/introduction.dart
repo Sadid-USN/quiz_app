@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
+import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
 
@@ -38,9 +40,10 @@ class IntroductionScreen extends StatelessWidget {
               onTap: () {
                 Get.offNamed('home');
               },
-              child: const Icon(
-                Icons.arrow_forward,
-                size: 35.0,
+              child: Lottie.asset(
+                AppAssets.arrowR,
+                height: 90,
+                width: 90,
               ))
         ],
       ),

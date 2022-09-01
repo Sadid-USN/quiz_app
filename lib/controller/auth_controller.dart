@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:quizapp/firebase/refrences.dart';
+import 'package:quizapp/screens/Login/login_screen.dart';
 import 'package:quizapp/widgets/dialogs/dialog_widget.dart';
 
 class AuthController extends GetxController {
@@ -60,7 +61,7 @@ class AuthController extends GetxController {
     Get.dialog(
       Dialogs.startDialog(onTap: () {
         Get.back();
-        //Navigate to LoginPage
+        goToLoginScreen();
       }),
       barrierDismissible: false,
     );
@@ -68,6 +69,10 @@ class AuthController extends GetxController {
 
   bool isLogged() {
     return _auth.currentUser != null;
+  }
+
+  void goToLoginScreen() {
+    Get.toNamed(LoginScreen.routeName);
   }
 
   void goToIntroductionScreen() {
