@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
-import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
 
 class IntroductionScreen extends StatelessWidget {
@@ -11,7 +10,7 @@ class IntroductionScreen extends StatelessWidget {
     return Scaffold(
         body: Container(
       decoration: BoxDecoration(
-        gradient: toggleMode(context),
+        gradient: toggleMode(),
       ),
       padding: EdgeInsets.symmetric(horizontal: Get.width * 0.2),
       alignment: Alignment.center,
@@ -37,7 +36,7 @@ class IntroductionScreen extends StatelessWidget {
           ),
           AppCirculeButton(
               onTap: () {
-                Get.to(() => const HomeScreen());
+                Get.offNamed('home');
               },
               child: const Icon(
                 Icons.arrow_forward,

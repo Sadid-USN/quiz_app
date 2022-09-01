@@ -1,10 +1,10 @@
 {
     "id": "ppr002",
-    "title": "Ислам",
-    "image": "",
-    "time_seconds": "900",
-    "description": "Узнай об Исламе больше",
-
+    "title": "Islam",
+    "image": "https://bit.ly/3TqFys0",
+    "time_seconds": 900,
+    "description": "Викторина, узнайте об Исламе больше",
+    "questions_count" : 2,
     "questions" : [
 
       {

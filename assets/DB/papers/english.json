@@ -1,10 +1,10 @@
 {
   "id": "ppr001",
   "title": "English",
-  "image": "",
-  "time_seconds": "900",
+  "image": "https://bit.ly/3AymX4P",
+  "time_seconds": 900,
   "description": "Разговорный английский, общайся как носители!",
-
+   "questions_count" : 2,
   "questions" : [
 
     {

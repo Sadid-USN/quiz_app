@@ -5,7 +5,7 @@ class QuestionModel {
   String title;
   String? image;
   String description;
-  String timeSeconds;
+  int timeSeconds;
   int questionCount;
 
   List<Questions>? questions;
@@ -23,29 +23,26 @@ class QuestionModel {
       : id = json['id'] as String,
         title = json['title'] as String,
         image = json['image'] as String,
-        timeSeconds = json['time_seconds'] as String,
+        timeSeconds = json['time_seconds'] as int,
         description = json['description'] as String,
         questionCount = 0,
         questions = (json['questions'] as List)
             .map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>))
             .toList();
 
-  QuestionModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
+  QuestionModel.fromSnapshot(DocumentSnapshot json)
       : id = json.id,
         title =
             json.data().toString().contains('title') ? json.get('title') : '',
-        image =
-            json.data().toString().contains('image') ? json.get('image') : '',
-        timeSeconds = json.data().toString().contains('time_seconds')
-            ? json.get('time_seconds')
-            : '',
+        image = json.data().toString().contains('') ? json.get('image') : '',
+        timeSeconds = json['time_seconds'] as int,
         description = json.data().toString().contains('description')
             ? json.get('description')
             : '',
-        questionCount = json.data().toString().contains('question_count')
-            ? json.get('question_count')
-            : 0,
+        questionCount = json['questions_count'] as int,
         questions = [];
+
+  String timeInMinits() => "${(timeSeconds / 60).ceil()} мин";
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

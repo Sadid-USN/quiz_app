@@ -22,5 +22,10 @@ const darkGradient = LinearGradient(
   ],
 );
 
-LinearGradient toggleMode(BuildContext context) =>
-    ChangeBrightness.isDarkMode(context) ? darkGradient : lightGradient;
+LinearGradient toggleMode() =>
+    ChangeBrightness.isDarkMode() ? darkGradient : lightGradient;
+
+Color coustomScaffoldColor(BuildContext context) =>
+    ChangeBrightness.isDarkMode()
+        ? const Color(0xff2e3c62)
+        : const Color.fromARGB(255, 240, 237, 255);
