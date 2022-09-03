@@ -32,7 +32,7 @@ class QuizCard extends GetView<FirebaseStorageController> {
       ),
       child: InkWell(
         onTap: () {
-          controller.navigateToQuestions(paper: model);
+          controller.navigateToQuestions(context: context, paper: model);
         },
         child: Padding(
           padding: const EdgeInsets.all(10.0),

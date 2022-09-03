@@ -1,33 +1,37 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:get/get.dart';
+import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/firebase/refrences.dart';
 import 'package:quizapp/models/question_model.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:quizapp/services/faribase_storage_service.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class FirebaseStorageController extends GetxController {
   //FirebaseStorageController controller = Get.put(FirebaseStorageController());
   final zoomDrawerController = ZoomDrawerController();
-  GlobalKey<FormState> signUpFormstate = GlobalKey<FormState>();
-  // late TextEditingController loginEmail;
-  // late TextEditingController loginPassword;
-  bool isShowPassword = true;
 
-  showPassword() {
-    isShowPassword = isShowPassword == true ? false : true;
-    update();
-  }
+  Future<bool> exitDialog() {
+    Get.defaultDialog(
+      buttonColor: Colors.transparent,
+      // contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      textConfirm: 'Exit',
+      confirmTextColor: Colors.indigo,
+      onConfirm: () {
+        SystemNavigator.pop();
+      },
 
-  signUp() {
-    if (signUpFormstate.currentState!.validate()) {
-      print('Validate');
-    } else {
-      print('not Valid');
-    }
+      onCancel: () {},
+      title: "",
+      middleText: "Are you sure you want to go out?",
+      backgroundColor: onSurfaceTextColor,
+      titleStyle: const TextStyle(color: Colors.indigo),
+      middleTextStyle: const TextStyle(color: Colors.indigo),
+    );
+    return Future.value(true);
   }
 
   @override
@@ -38,28 +42,9 @@ class FirebaseStorageController extends GetxController {
   }
 
   toggleDrawer() {
-    print("Toggle drawer");
+    print("Drawer Toggled");
     zoomDrawerController.toggle?.call();
     update();
-  }
-
-  void signOut() {}
-
-  void signIn() {}
-  void website() {}
-
-  void email() {
-    final Uri emailLauncher = Uri(
-      scheme: 'Darul-asar',
-      path: 'ulamuyaman@gmail.com',
-    );
-    _lounch(emailLauncher.toString());
-  }
-
-  Future<void> _lounch(String url) async {
-    if (!await launch(url)) {
-      throw 'could not launch $url';
-    }
   }
 
   final allPapers = <QuestionModel>[].obs;
@@ -97,18 +82,21 @@ class FirebaseStorageController extends GetxController {
   }
 
   void navigateToQuestions(
-      {required QuestionModel paper, bool tryAgain = false}) {
+      {required QuestionModel paper,
+      bool tryAgain = false,
+      required BuildContext context}) {
     AuthController authController = Get.find();
     if (authController.isLogged()) {
       if (tryAgain) {
-        Get.back();
-        Get.offNamed('');
+        //   Get.back();
+        // Get.offNamed('');
       } else {
-        Get.toNamed('');
+        print('Logged in');
+        Get.offNamed('quizscreen');
       }
     } else {
       print(paper.title);
-      authController.showLoginDialog();
+      authController.showLoginDialog(context);
     }
   }
 }

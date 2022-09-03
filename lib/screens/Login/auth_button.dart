@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class AuthButton extends StatelessWidget {
   final double height;
   final double width;
   final void Function()? onPressed;
   final String? text;
+  final SvgPicture? image;
   const AuthButton({
     Key? key,
     this.onPressed,
     this.text,
+    this.image,
     required this.height,
     required this.width,
   }) : super(key: key);

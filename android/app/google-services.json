@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1098795874442-okm7a4foqr36gm1ass4i8hmiuqe032i4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quizapp",
+            "certificate_hash": "3738c3250ee5323d8d322d792149a3b2a69949db"
+          }
+        },
+        {
           "client_id": "1098795874442-rpval3us9nt3lqogrhbu3p3dn18k0ipb.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1098795874442-rpval3us9nt3lqogrhbu3p3dn18k0ipb.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.quizapp"
+              }
             }
           ]
         }

@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:quizapp/firebase/refrences.dart';
@@ -7,10 +7,29 @@ import 'package:quizapp/screens/Login/login_screen.dart';
 import 'package:quizapp/widgets/dialogs/dialog_widget.dart';
 
 class AuthController extends GetxController {
+  late TextEditingController loginEmail;
+  late TextEditingController loginPassword;
+
+  GlobalKey<FormState> signUpFormstate = GlobalKey<FormState>();
+  bool isShowPassword = true;
+
   @override
   void onReady() {
     initAuth();
     super.onReady();
+  }
+
+  signUpValidator() {
+    if (signUpFormstate.currentState!.validate()) {
+      print('Validate');
+    } else {
+      print('not Valid');
+    }
+  }
+
+  showPassword() {
+    isShowPassword = isShowPassword == true ? false : true;
+    update();
   }
 
   late FirebaseAuth _auth;
@@ -40,13 +59,24 @@ class AuthController extends GetxController {
           idToken: authAccount.idToken,
           accessToken: authAccount.accessToken,
         );
-
         await _auth.signInWithCredential(credential);
         await saveUser(account);
+        goToQuizScreen();
+      } else {
+        goToHomePage();
       }
     } on Exception catch (error) {
       debugPrint(error.toString());
     }
+  }
+
+  goToQuizScreen() {
+    Get.toNamed('quizscreen');
+  }
+
+  User? getUser() {
+    _user.value = _auth.currentUser;
+    return _user.value;
   }
 
   saveUser(GoogleSignInAccount account) {
@@ -57,12 +87,32 @@ class AuthController extends GetxController {
     });
   }
 
-  void showLoginDialog() {
+  Future<void> signOut() async {
+    print('***SIGN OUT***');
+
+    try {
+      await _auth.signOut();
+      goToHomePage();
+    } on FirebaseAuthException catch (error) {
+      print(error.message);
+    }
+  }
+
+  void goToHomePage() {
+    Get.offAllNamed('home');
+  }
+
+  void showLoginDialog(BuildContext context) {
     Get.dialog(
-      Dialogs.startDialog(onTap: () {
-        Get.back();
-        goToLoginScreen();
-      }),
+      Dialogs.startDialog(
+        onTap: () {
+          Get.back();
+          goToLoginScreen();
+        },
+        cancel: () {
+          Navigator.of(context).pop();
+        },
+      ),
       barrierDismissible: false,
     );
   }
