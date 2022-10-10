@@ -8,11 +8,19 @@ import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/firebase/refrences.dart';
 import 'package:quizapp/models/question_model.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
+import 'package:quizapp/screens/quiz_screen.dart';
 import 'package:quizapp/services/faribase_storage_service.dart';
 
 class FirebaseStorageController extends GetxController {
   //FirebaseStorageController controller = Get.put(FirebaseStorageController());
   final zoomDrawerController = ZoomDrawerController();
+
+  @override
+  void onReady() {
+    getAllPapers();
+
+    super.onReady();
+  }
 
   Future<bool> exitDialog() {
     Get.defaultDialog(
@@ -34,13 +42,6 @@ class FirebaseStorageController extends GetxController {
     return Future.value(true);
   }
 
-  @override
-  void onReady() {
-    getAllPapers();
-
-    super.onReady();
-  }
-
   toggleDrawer() {
     print("Drawer Toggled");
     zoomDrawerController.toggle?.call();
@@ -50,10 +51,6 @@ class FirebaseStorageController extends GetxController {
   final allPapers = <QuestionModel>[].obs;
 
   Future<void> getAllPapers() async {
-    // List<String> imageName = [
-    //   "pazl",
-    //   "question",
-    // ];
     try {
       // Here we get description from our papers from firebase
       QuerySnapshot<Map<String, dynamic>> data = await questionRF.get();
@@ -88,11 +85,10 @@ class FirebaseStorageController extends GetxController {
     AuthController authController = Get.find();
     if (authController.isLogged()) {
       if (tryAgain) {
-        //   Get.back();
-        // Get.offNamed('');
+        Get.back();
       } else {
         print('Logged in');
-        Get.offNamed('quizscreen');
+        Get.toNamed(QuizScreen.routeName, arguments: paper);
       }
     } else {
       print(paper.title);

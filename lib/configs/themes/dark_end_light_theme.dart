@@ -6,6 +6,7 @@ const Color startPrimaryDarkColor = Color(0XFF380036);
 const Color endtPrimaryDarkColor = Color(0XFF0cbaba);
 
 const Color startPrimaryColorLight = Color(0xff2193b0);
+const Color greenPrimaryColorLight = Color.fromARGB(255, 130, 189, 127);
 const Color endPrimaryColorLight = Color.fromARGB(255, 255, 154, 104);
 Color displayColor = Colors.grey[200]!;
 
@@ -30,11 +31,11 @@ class LightTheme with SubThemeData {
   buildLightTheme() {
     final ThemeData systemLightTheme = ThemeData.light();
     return systemLightTheme.copyWith(
-        primaryColor: displayColor,
+        primaryColor: greenPrimaryColorLight,
         iconTheme: getIconTheme(),
         textTheme: getTextTheme().apply(
           bodyColor: bodyLightTextColor,
-          displayColor: displayColor,
+          displayColor: endPrimaryColorLight,
         ));
   }
 }

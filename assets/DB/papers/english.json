@@ -4,12 +4,12 @@
   "image": "https://bit.ly/3AymX4P",
   "time_seconds": 900,
   "description": "Разговорный английский, общайся как носители!",
-   "questions_count" : 2,
+
   "questions" : [
 
     {
-        "id": "0",
-        "question": "Как будет на английском Это не твоё дело?",
+        "id": "1",
+        "question": "Как будет на английском Это не твоё дело!?",
 
 
         "answers": [
@@ -34,8 +34,8 @@
         "correct_answer": "C"
     },
     {
-        "id": "1",
-        "question": "Как будет на английском Заикаться?",
+        "id": "2",
+        "question": "Как будет на английском Заикаться!?",
 
 
         "answers": [
@@ -59,6 +59,466 @@
         ],
 
         "correct_answer": "A"
+    },
+    {
+      "id": "3",
+      "question": "Как будет на английском Как идут дела!?",
+
+
+      "answers": [
+
+       {
+          "identifier" : "A",
+          "answer" : "How is it going?"
+       },
+       {
+          "identifier" : "B",
+          "answer" : "How going is it?"
+       },
+       {
+          "identifier" : "C",
+          "answer" : "do you going?"
+       },
+       {
+          "identifier" : "D",
+          "answer" : "Now you going?"
+       }
+      ],
+
+      "correct_answer": "A"
+  },
+
+  {
+   "id": "4",
+   "question": "Как будет на английском давно не видились!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "no see Long time!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "How  Long time is?"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Long time no see!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "what time is it?"
     }
+   ],
+
+   "correct_answer": "С"
+},
+{
+   "id": "5",
+   "question": "Как будет на английском чем занимаешься!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "What's going on?"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Where are you going?"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "What is your name?"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "What are you up to?"
+    }
+   ],
+
+   "correct_answer": "D"
+},
+{
+   "id": "6",
+   "question": "Как будет на английском Чем занимался все это время!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "How dare you!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "What have you been up to?"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "What's your problem?"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "What is her name?"
+    }
+   ],
+
+   "correct_answer": "B"
+},
+{
+   "id": "7",
+   "question": "Как будет на английском до скорого!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "See you later!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "See you soon!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "say no more"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "I saw the sea"
+    }
+   ],
+
+   "correct_answer": "B"
+},
+{
+   "id": "8",
+   "question": "Как будет на английском увидимся позже!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "See you later!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "what have you seen?"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "later no see!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Say it again"
+    }
+   ],
+
+   "correct_answer": "A"
+},
+{
+   "id": "9",
+   "question": "Как будет на английском до следующего раза!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Till the end!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "In the end"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Till next time!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Next time"
+    }
+   ],
+
+   "correct_answer": "C"
+},
+{
+   "id": "10",
+   "question": "Как будет на английском береги себя!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Fake it till you make it"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Take down!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Take it!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Take care!"
+    }
+   ],
+
+   "correct_answer": "D"
+},
+{
+   "id": "11",
+   "question": "Как будет на английском поговорим с тобой позже!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Talk to you later!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Talk to me!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Stop tolking!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "I need to talk to you!"
+    }
+   ],
+
+   "correct_answer": "A"
+},
+{
+   "id": "12",
+   "question": "Как будет на английском хорошего дня!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Today is a good day!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Have a nice day!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Seems like a good day!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Don't ruin my day!"
+    }
+   ],
+
+   "correct_answer": "B"
+},
+{
+   "id": "13",
+   "question": "Как будет на английском хороших выходных!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Good morning!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Have a good weekend!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "How was your weekend?"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Weekends are always short!"
+    }
+   ],
+
+   "correct_answer": "B"
+},
+{
+   "id": "14",
+   "question": "Как будет на английском хорошей поездки!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Save your time"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Do you travel a lot?"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Have a safe trip"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Goodnight!"
+    }
+   ],
+
+   "correct_answer": "С"
+},
+{
+   "id": "15",
+   "question": "Как будет на английском передавай привет...!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Tell him Thank you!"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Say goodbye!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Do more say less!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Say hi to...!"
+    }
+   ],
+
+   "correct_answer": "D"
+},
+{
+   "id": "16",
+   "question": "Как будет на английском передавай большой привет…(если речь идет о близких людях)!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Send my love to…"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "Send me a letter!"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "Send him an email!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Send it by tomorrow"
+    }
+   ],
+
+   "correct_answer": "A"
+},
+{
+   "id": "17",
+   "question": "Как будет на английском вкратце/короче говоря!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "Tell your story"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "It is to long"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "It is so beautiful story!"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Long story short!"
+    }
+   ],
+
+   "correct_answer": "D"
+},
+{
+   "id": "18",
+   "question": "Как будет на английском что касается/по отношению!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "too far"
+    },
+    {
+       "identifier" : "B",
+       "answer" : "so true"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "As far / as to"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Some times"
+    }
+   ],
+
+   "correct_answer": "C"
+},
+{
+   "id": "19",
+   "question": "Как будет на английском я прошел через всё это!?",
+
+
+   "answers": [
+
+    {
+       "identifier" : "A",
+       "answer" : "I've been through it all."
+    },
+    {
+       "identifier" : "B",
+       "answer" : "At the time i was running"
+    },
+    {
+       "identifier" : "C",
+       "answer" : "I was busy"
+    },
+    {
+       "identifier" : "D",
+       "answer" : "Where have you been?"
+    }
+   ],
+
+   "correct_answer": "A"
+}
   ]
 }

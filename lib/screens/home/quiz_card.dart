@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_icons.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
 import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
@@ -32,7 +33,11 @@ class QuizCard extends GetView<FirebaseStorageController> {
       ),
       child: InkWell(
         onTap: () {
-          controller.navigateToQuestions(context: context, paper: model);
+          controller.navigateToQuestions(
+            context: context,
+            paper: model,
+            tryAgain: false,
+          );
         },
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -54,13 +59,13 @@ class QuizCard extends GetView<FirebaseStorageController> {
                             fit: BoxFit.cover,
                             placeholder: (context, url) => Center(
                               child: Lottie.asset(
-                                  'assets/lotties/loadingblue.json'),
+                                AppAssets.loadingwhite,
+                              ),
                             ),
                             errorWidget:
                                 (BuildContext context, String url, error) =>
                                     Center(
-                              child: Lottie.asset(
-                                  'assets/lotties/errorloading.json'),
+                              child: Lottie.asset(AppAssets.errorLoading),
                             ),
                           ),
                         )),

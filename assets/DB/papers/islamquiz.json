@@ -4,11 +4,11 @@
     "image": "https://bit.ly/3TqFys0",
     "time_seconds": 900,
     "description": "Викторина, узнайте об Исламе больше",
-    "questions_count" : 2,
+
     "questions" : [
 
       {
-          "id": "0",
+          "id": "1",
           "question": "Из скольки столпов состит Ислам?",
 
 
@@ -34,7 +34,7 @@
           "correct_answer": "A"
       },
       {
-          "id": "1",
+          "id": "2",
           "question": "Какой самый большой грех в Исламе?",
 
 

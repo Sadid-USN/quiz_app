@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
 import 'package:quizapp/screens/Login/login_screen.dart';
@@ -22,9 +23,11 @@ class Routes {
           page: () => const LoginScreen(),
         ),
         GetPage(
-          name: QuizScreen.routeName,
-          page: () => const QuizScreen(),
-        ),
+            name: QuizScreen.routeName,
+            page: () => const QuizScreen(),
+            binding: BindingsBuilder(() {
+              Get.put(QuestionsController());
+            })),
         GetPage(
             name: '/home',
             page: () => const HomeScreen(),

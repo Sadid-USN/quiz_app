@@ -105,7 +105,7 @@ class LoginScreen extends GetView<AuthController> {
                   },
                   height: 50,
                   width: MediaQuery.of(context).size.width,
-                  text: 'Sign Up',
+                  title: 'Sign Up',
                 ),
                 const SizedBox(
                   height: 20.0,
