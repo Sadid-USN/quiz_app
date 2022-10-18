@@ -13,15 +13,17 @@ class BgDecoration extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned.fill(
-          child: Container(
-            decoration: BoxDecoration(
-              color: showGradient ? null : Theme.of(context).primaryColor,
-              gradient: showGradient ? lightGradient : null,
-            ),
-            child: CustomPaint(
-              painter: BgPainter(),
-            ),
+        Container(
+          height: MediaQuery.of(context).size.height,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: showGradient
+                ? null
+                : Theme.of(context).primaryColor.withOpacity(0.3),
+            gradient: showGradient ? lightGradient : null,
+          ),
+          child: CustomPaint(
+            painter: BgPainter(),
           ),
         ),
         Positioned.fill(

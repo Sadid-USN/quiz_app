@@ -26,10 +26,10 @@ class AuthButton extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
             color: Theme.of(context).cardColor,
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
-                  color: Colors.grey.shade300,
-                  offset: const Offset(1.0, 0.1),
+                  color: Colors.black26,
+                  offset: Offset(1.0, 1.0),
                   blurRadius: 2.0),
             ]),
         child: Text(

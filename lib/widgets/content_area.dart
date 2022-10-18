@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/configs/themes/ui_parameters.dart';
 
 class ContetArea extends StatelessWidget {
   final bool addPadding;
@@ -9,22 +8,18 @@ class ContetArea extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Material(
-      borderRadius: const BorderRadius.vertical(
-        top: Radius.circular(20),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.only(top: 50),
+      height: MediaQuery.of(context).size.height / 2 * 2,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        color: addPadding ? Colors.black12 : Colors.white70,
+        borderRadius: const BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
       ),
-      clipBehavior: Clip.hardEdge,
-      type: MaterialType.transparency,
-      child: Ink(
-        decoration: const BoxDecoration(color: Colors.black12),
-        padding: addPadding
-            ? EdgeInsets.only(
-                top: mobileScreenPadding,
-                left: mobileScreenPadding,
-                right: mobileScreenPadding,
-              )
-            : EdgeInsets.zero,
-      ),
+      child: child,
     );
   }
 }

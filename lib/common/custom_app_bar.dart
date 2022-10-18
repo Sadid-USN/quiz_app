@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
+import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
+import 'package:quizapp/screens/test_overview_screen.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
+import 'package:quizapp/widgets/countdown_timer.dart';
 
-//! 2:40
+//!
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
@@ -52,7 +56,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   offset: const Offset(10, 0),
                   child: AppCirculeButton(
                     // ignore: unnecessary_null_in_if_null_operators
-                    onTap: onMenuTap ?? null,
+                    onTap: onMenuTap ??
+                        () => Get.toNamed(TestOverviewScreen.routName),
                     child: SvgPicture.asset(
                       AppAssets.muneLeft,
                       color: Colors.black,
@@ -70,4 +75,51 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size(double.maxFinite, 100);
+}
+
+class MyAppBar extends StatelessWidget {
+  const MyAppBar({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    QuestionsController controller = Get.put(QuestionsController());
+    return AppBar(
+      automaticallyImplyLeading: false,
+      elevation: 0.0,
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+              alignment: Alignment.center,
+              height: 30,
+              width: 80,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(width: 1.2, color: Colors.white)),
+              child: Obx(
+                () => CountDownTimer(
+                  time: controller.time.value,
+                  color: Colors.white,
+                ),
+              )),
+          Obx(
+            () => Text(
+              'Q. ${(controller.questionIndex.value + 1).toString().padLeft(2, "0")}',
+              style: appBarText,
+            ),
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: SvgPicture.asset(
+              AppAssets.muneLeft,
+              color: Colors.white,
+              height: 40,
+              width: 40,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

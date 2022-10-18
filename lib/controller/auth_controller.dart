@@ -61,7 +61,7 @@ class AuthController extends GetxController {
         );
         await _auth.signInWithCredential(credential);
         await saveUser(account);
-        goToQuizScreen();
+        goToHomeScreen();
       } else {
         goToHomePage();
       }
@@ -70,8 +70,8 @@ class AuthController extends GetxController {
     }
   }
 
-  goToQuizScreen() {
-    Get.toNamed('quizscreen');
+  goToHomeScreen() {
+    Get.toNamed('home');
   }
 
   User? getUser() {

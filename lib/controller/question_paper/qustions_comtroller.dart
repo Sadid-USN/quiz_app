@@ -1,10 +1,15 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/firebase/loading_status.dart';
 import 'package:quizapp/firebase/refrences.dart';
 import 'package:quizapp/models/question_model.dart';
+import 'package:quizapp/screens/answer_check_screen.dart';
+import 'package:quizapp/screens/result_screen.dart';
 
+//! 3:15
 class QuestionsController extends GetxController {
   final loadingSatatus = LoadingStatus.loading.obs;
   late QuestionModel questionModel;
@@ -16,6 +21,11 @@ class QuestionsController extends GetxController {
 
   Rxn<Questions> currentQuestion = Rxn<Questions>();
 
+  //! Timer
+  Timer? _timer;
+  int remainSeconds = 1;
+  final time = '00.00'.obs;
+
   @override
   void onReady() {
     super.onReady();
@@ -23,7 +33,7 @@ class QuestionsController extends GetxController {
     // ignore: no_leading_underscores_for_local_identifiers
     final _questionModel = Get.arguments as QuestionModel;
     loadData(_questionModel);
-    print(_questionModel.id);
+    print('.......On Readt......');
 
     update();
   }
@@ -55,26 +65,36 @@ class QuestionsController extends GetxController {
             .toList();
 
         _questions.answers = answers;
-        if (questionPaper.questions != null &&
-            questionPaper.questions!.isNotEmpty) {
-          allQuestions.assignAll(questionPaper.questions!);
-          currentQuestion.value = questionPaper.questions![0];
-          print(questionPaper.questions![0].question);
-          loadingSatatus.value = LoadingStatus.completed;
-        } else {
-          loadingSatatus.value = LoadingStatus.error;
-        }
       }
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
     }
+
+    if (questionPaper.questions != null &&
+        questionPaper.questions!.isNotEmpty) {
+      allQuestions.assignAll(questionPaper.questions!);
+      currentQuestion.value = questionPaper.questions![0];
+      _startTimer(questionPaper.timeSeconds);
+      print('.........START TIMER........');
+      loadingSatatus.value = LoadingStatus.completed;
+    } else {
+      loadingSatatus.value = LoadingStatus.error;
+    }
   }
 
   void selectedAnswer(String? answer) {
-    // currentQuestion.value!.selectedAnswer = answer;
+    currentQuestion.value!.selectedAnswer = answer;
     update(['answer_list']);
+  }
+
+  String get checkCompletedTest {
+    final answered = allQuestions
+        .where((element) => element.selectedAnswer != null)
+        .toList()
+        .length;
+    return '$answered out of ${allQuestions.length} answered';
   }
 
   void nextQuestion() {
@@ -87,5 +107,35 @@ class QuestionsController extends GetxController {
     if (questionIndex.value <= 0) return;
     questionIndex.value--;
     currentQuestion.value = allQuestions[questionIndex.value];
+  }
+
+  void jumpToQuestion(int index, {bool isGoback = true}) {
+    questionIndex.value = index;
+    currentQuestion.value = allQuestions[index];
+    Get.toNamed(AnswerCheckScreen.routName);
+    if (isGoback) {
+      Get.back();
+    }
+  }
+
+  _startTimer(int seconds) {
+    const duration = Duration(seconds: 1);
+    remainSeconds = seconds;
+    _timer = Timer.periodic(duration, (Timer timer) {
+      if (remainSeconds == 0) {
+        timer.cancel();
+      } else {
+        int minutes = remainSeconds ~/ 60;
+        int seconds = remainSeconds % 60;
+        time.value =
+            "${minutes.toString().padLeft(2, "0")}:${seconds.toString().padLeft(2, "0")}";
+        remainSeconds--;
+      }
+    });
+  }
+
+  void completed() {
+    _timer!.cancel();
+    Get.offAndToNamed(ResultScreen.routName);
   }
 }

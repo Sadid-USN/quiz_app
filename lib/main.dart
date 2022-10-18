@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         home: DataUploadedScreen(),
+        // home: const SplashScreen(),
         getPages: Routes.routes(),
         debugShowCheckedModeBanner: false,
         title: 'Quiz',

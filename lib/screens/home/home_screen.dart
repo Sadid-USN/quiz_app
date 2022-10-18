@@ -11,6 +11,8 @@ import 'package:quizapp/screens/home/quiz_card.dart';
 
 class HomeScreen extends GetView<FirebaseStorageController> {
   const HomeScreen({Key? key}) : super(key: key);
+
+  static const String routName = '/home';
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
