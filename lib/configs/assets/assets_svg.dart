@@ -16,4 +16,5 @@ class AppAssets {
   static const loadingwhite = '${lottiePath}loadingwhite.json';
   static const alarm = '${lottiePath}alarm.json';
   static const cupwinning = '${lottiePath}cupwinning.json';
+  static const star = '${lottiePath}star.json';
 }

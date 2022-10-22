@@ -32,41 +32,43 @@ class MyField extends StatelessWidget {
       validator: validator,
       controller: controller,
       decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16.0),
-            borderSide: const BorderSide(
-              width: 2.0,
-              color: onSurfaceTextColor,
-            ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(
+            width: 2.0,
+            color: onSurfaceTextColor,
           ),
-          floatingLabelBehavior: FloatingLabelBehavior.auto,
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-          label: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Text(
-              label,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline1!
-                  .copyWith(color: Colors.white, fontSize: 18),
-            ),
+        ),
+        floatingLabelBehavior: FloatingLabelBehavior.auto,
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+        label: Padding(
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          child: Text(
+            label,
+            style: Theme.of(context)
+                .textTheme
+                .headline1!
+                .copyWith(color: Colors.white, fontSize: 18),
           ),
-          suffixIcon: InkWell(
-            onTap: onTapIcon,
-            child: Icon(
-              suffixIcon,
-              color: obscureText == false ? Colors.white : Colors.white,
-            ),
+        ),
+        suffixIcon: InkWell(
+          onTap: onTapIcon,
+          child: Icon(
+            suffixIcon,
+            color: obscureText == false ? Colors.white : Colors.white,
           ),
-          hintText: hintText,
-          hintStyle: Theme.of(context)
-              .textTheme
-              .headline1!
-              .copyWith(color: Colors.white, fontSize: 15.0),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.0),
-              borderSide: const BorderSide(color: Colors.white))),
+        ),
+        hintText: hintText,
+        hintStyle: Theme.of(context)
+            .textTheme
+            .headline1!
+            .copyWith(color: Colors.white38, fontSize: 15.0),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(color: Colors.white),
+        ),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
 
 bool isSelected = false;
@@ -24,7 +25,7 @@ var answerText = GoogleFonts.ptSerif(
 var appBarText = GoogleFonts.ptSerif(
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
-  color: Get.isDarkMode ? onSurfaceTextColor : onSurfaceTextColor,
+  color: Get.isDarkMode ? startPrimaryDarkColor : onSurfaceTextColor,
 );
 var headerText = GoogleFonts.ptSerif(
   fontWeight: FontWeight.bold,

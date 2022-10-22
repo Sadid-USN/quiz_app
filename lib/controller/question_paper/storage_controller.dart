@@ -67,6 +67,7 @@ class FirebaseStorageController extends GetxController {
             await Get.find<FirebaseStorageService>().getImage(paper.image);
         // paper.image = imgUrl!;
         allPapers.assignAll(paperList);
+
         // print(imgUrl);
       }
     } catch (e) {
@@ -86,6 +87,9 @@ class FirebaseStorageController extends GetxController {
     if (authController.isLogged()) {
       if (tryAgain) {
         Get.back();
+
+        Get.toNamed(QuizScreen.routeName,
+            arguments: paper, preventDuplicates: false);
       } else {
         print('Logged in');
         Get.toNamed(QuizScreen.routeName, arguments: paper);

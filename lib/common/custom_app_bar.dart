@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
+import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
+import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/screens/test_overview_screen.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
@@ -58,11 +60,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     // ignore: unnecessary_null_in_if_null_operators
                     onTap: onMenuTap ??
                         () => Get.toNamed(TestOverviewScreen.routName),
-                    child: SvgPicture.asset(
-                      AppAssets.muneLeft,
-                      color: Colors.black,
-                      height: 40,
-                      width: 40,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: SvgPicture.asset(
+                        AppAssets.muneLeft,
+                        color: Get.isDarkMode
+                            ? startPrimaryDarkColor
+                            : onSurfaceTextColor,
+                        height: 40,
+                        width: 40,
+                      ),
                     ),
                   ),
                 )

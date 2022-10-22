@@ -1,0 +1,409 @@
+{
+    "id": "ppr002",
+    "title": "English-2",
+    "image": "https://bit.ly/3TBDSvH",
+    "time_seconds": 500,
+    "description": "Топ 15 Английских выражений часть 2",
+
+    "questions" : [
+
+      {
+          "id": "1",
+          "question": "Как будет на английском «Вряд-ли»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Fat meal"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Fat life"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Fat chance"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Fate is predetermined"
+           }
+          ],
+          "correct_answer": "C"
+      },
+      {
+          "id": "2",
+          "question": "Как будет на английском «Да уж»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "I'll say"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "I'll be back"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "I knew it"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "I'll think"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "3",
+          "question": "Как будет на английском «Я же говорил/как я и говорил»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Rest In Peace"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "I rest my case"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "In my case"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Case closed"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+          "id": "4",
+          "question": "Как будет на английском «Выбирай»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Take my phone"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Tell me why?"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Take ownership"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Take youre pick"
+           }
+          ],
+          "correct_answer": "D"
+      },
+      {
+          "id": "5",
+          "question": "Как будет на английском «Не торопись»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Take your time"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "It's not yore time?"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Take your turn"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "It's time to take"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "6",
+          "question": "Как будет на английском «Не психуй/не нервничай»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Don't freak out!"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "don't worry"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Don't mess with him"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Don't say goodbay"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "7",
+          "question": "Как будет на английском «Не шути со мной»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Don't play"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Don't mess with me"
+           },
+           {
+              "identifier" : "C",
+              "answer" : " Don't play with me"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Вариант B и C"
+           }
+          ],
+          "correct_answer": "D"
+      },
+      {
+          "id": "8",
+          "question": "Как будет на английском «Я буду хорошо с ним/с ней обращаться»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Just treat him like everybody"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "I'll treat him/her well"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Please treat us like human beings"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "No one treat him like me"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+          "id": "9",
+          "question": "Как будет на английском «Не волнуйся, я позабочусь об остальном»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "No problem I have the same"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Don't worry, I'll take care of the rest"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "No reason to worry"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Taking a break can lead to breakthroughs"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+         "id": "10",
+         "question": "Как будет на английском передавай привет...!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "Tell him Thank you!"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "Say goodbye!"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "Do more say less!"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Say hi to...!"
+          }
+         ],
+
+         "correct_answer": "D"
+      },
+      {
+         "id": "11",
+         "question": "Как будет на английском передавай большой привет…(если речь идет о близких людях)!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "Send my love to…"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "Send me a letter!"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "Send him an email!"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Send it by tomorrow"
+          }
+         ],
+
+         "correct_answer": "A"
+      },
+      {
+         "id": "12",
+         "question": "Как будет на английском вкратце/короче говоря!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "Tell your story"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "It is to long"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "It is so beautiful story!"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Long story short!"
+          }
+         ],
+
+         "correct_answer": "D"
+      },
+      {
+         "id": "13",
+         "question": "Как будет на английском что касается/по отношению!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "too far"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "so true"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "As far / as to"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Some times"
+          }
+         ],
+
+         "correct_answer": "C"
+      },
+      {
+         "id": "14",
+         "question": "Как будет на английском я прошел через всё это!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "I've been through it all."
+          },
+          {
+             "identifier" : "B",
+             "answer" : "At the time i was running"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "I was busy"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Where have you been?"
+          }
+         ],
+
+         "correct_answer": "A"
+      },
+      {
+         "id": "15",
+         "question": "Как будет на английском «Хороший выбор»!?",
+
+
+         "answers": [
+
+
+          {
+             "identifier" : "A",
+             "answer" : "Good luck"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "Good choice"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "Not so Good"
+          },
+          {
+            "identifier" : "D",
+            "answer" : "Good call!"
+         }
+         ],
+
+         "correct_answer": "D"
+      }
+
+    ]
+  }

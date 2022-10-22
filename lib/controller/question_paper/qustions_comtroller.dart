@@ -3,10 +3,11 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+import 'package:quizapp/controller/question_paper/storage_controller.dart';
 import 'package:quizapp/firebase/loading_status.dart';
 import 'package:quizapp/firebase/refrences.dart';
 import 'package:quizapp/models/question_model.dart';
-import 'package:quizapp/screens/answer_check_screen.dart';
+import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:quizapp/screens/result_screen.dart';
 
 //! 3:15
@@ -112,7 +113,7 @@ class QuestionsController extends GetxController {
   void jumpToQuestion(int index, {bool isGoback = true}) {
     questionIndex.value = index;
     currentQuestion.value = allQuestions[index];
-    Get.toNamed(AnswerCheckScreen.routName);
+
     if (isGoback) {
       Get.back();
     }
@@ -137,5 +138,15 @@ class QuestionsController extends GetxController {
   void completed() {
     _timer!.cancel();
     Get.offAndToNamed(ResultScreen.routName);
+  }
+
+  void tryAgain() {
+    Get.find<FirebaseStorageController>().navigateToQuestions(
+        context: Get.context!, paper: questionModel, tryAgain: true);
+  }
+
+  void navigateToHome() {
+    _timer!.cancel();
+    Get.offNamedUntil(HomeScreen.routName, (route) => false);
   }
 }

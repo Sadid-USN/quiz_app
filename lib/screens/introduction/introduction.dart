@@ -19,11 +19,10 @@ class IntroductionScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(
-            Icons.star,
-          ),
+          Lottie.asset(AppAssets.star, height: 40),
           const SizedBox(
-            height: 40.0,
+            height: 50.0,
+            width: 50.0,
           ),
           const Text(
             'This quiz will help you expand your horizons of knowledge to a new level, choose a quiz from the category that interests you.',

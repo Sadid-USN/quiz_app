@@ -111,8 +111,6 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                 );
                               },
                               itemBuilder: (BuildContext context, index) {
-                                //  return Center(
-                                //       child: Lottie.asset('assets/DB/papers/loadingblue.json'));
                                 return QuizCard(
                                   model: controller.allPapers[index],
                                 );

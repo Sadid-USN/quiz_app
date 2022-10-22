@@ -4,8 +4,11 @@ import 'package:lottie/lottie.dart';
 import 'package:quizapp/common/custom_app_bar.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
+import 'package:quizapp/configs/themes/ui_parameters.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/controller/result_controller.dart';
+import 'package:quizapp/screens/Login/auth_button.dart';
+import 'package:quizapp/screens/answer_check_screen.dart';
 import 'package:quizapp/widgets/bg_decoration.dart';
 import 'package:quizapp/widgets/cards/answer_card.dart';
 import 'package:quizapp/widgets/cards/question_number_card.dart';
@@ -31,16 +34,22 @@ class ResultScreen extends GetView<QuestionsController> {
                 addPadding: false,
                 child: Column(
                   children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
                     Lottie.asset(
                       AppAssets.cupwinning,
-                      height: 100,
+                      height: 80,
                     ),
                     Text(
                       'Congratulation',
                       style: headerText,
                     ),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Text(
-                      controller.points,
+                      "You have got ${controller.points} Points",
                       style: smallText,
                     ),
                     const SizedBox(
@@ -74,7 +83,7 @@ class ResultScreen extends GetView<QuestionsController> {
                             if (selectedAnswer == correctAnswer) {
                               status = AnswerStatus.correct;
                             } else if (qustions.selectedAnswer == null) {
-                              status = AnswerStatus.wrong;
+                              status = AnswerStatus.notanswered;
                             } else {
                               status = AnswerStatus.wrong;
                             }
@@ -85,9 +94,36 @@ class ResultScreen extends GetView<QuestionsController> {
                                 onTap: () {
                                   controller.jumpToQuestion(index,
                                       isGoback: false);
+                                  Get.toNamed(AnswerCheckScreen.routName);
                                 });
                           }),
                     ),
+                    ColoredBox(
+                      color: Colors.white.withOpacity(0.0),
+                      child: Padding(
+                        padding: ChangeBrightness.mobileScreenPadding,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            AuthButton(
+                                color: Colors.cyan.shade200,
+                                onPressed: () {
+                                  controller.tryAgain();
+                                },
+                                title: 'Try again',
+                                height: 70,
+                                width: 150),
+                            AuthButton(
+                                onPressed: () {
+                                  controller.saveTestReuslts();
+                                },
+                                title: 'Go Home',
+                                height: 70,
+                                width: 150),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

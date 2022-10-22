@@ -1,0 +1,409 @@
+{
+   "id": "ppr003",
+   "title": "English-2",
+   "image": "https://bit.ly/3gyaRlS",
+   "time_seconds": 500,
+   "description": "Топ 15 Английских выражений часть 3",
+
+   "questions" : [
+
+     {
+         "id": "1",
+         "question": "Как будет на английском «Не волнуйся ведь он завтра вернётся»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "Don't worry, after all he'll be back tomorrow"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "It looks like You will go to medical school after all."
+          },
+          {
+             "identifier" : "C",
+             "answer" : "Of course we were afraid. After all, he was a prisoner."
+          },
+          {
+             "identifier" : "D",
+             "answer" : "I'm a human after all"
+          }
+         ],
+         "correct_answer": "A"
+     },
+     {
+         "id": "2",
+         "question": "Как будет на английском «Вдруг/Внезано мы услышали громкий грохот»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "All of a sudden the lights started to flash in the room"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "All of a sudden she screamed at the man standing in front of her"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "Suddenly we witnessed an accident"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "All of a sudden we heard a loud boom."
+          }
+         ],
+         "correct_answer": "D"
+     },
+     {
+         "id": "3",
+         "question": "Как будет на английском «Лучше бы ты пошел/пошла домой пораньше»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "We would all be better off just saving money and going back home"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "I know I’d be better off with him, but I can't tell him."
+          },
+          {
+             "identifier" : "C",
+             "answer" : "You would be better off going home early"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "You would be better off going to learn English"
+          }
+         ],
+         "correct_answer": "C"
+     },
+     {
+         "id": "4",
+         "question": "Как будет на английском «Это правда. Ты мне нравишься/Я влблён в тебя»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "You can tell by the look in his eyes that he is totally into her"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "It’s true. I’m totally into you"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "He looked into his wife's eyes and said, “I’m totally into you”"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "I'm breaking into your soul"
+          }
+         ],
+         "correct_answer": "B"
+     },
+     {
+         "id": "5",
+         "question": "Как будет на английском «Эти двое созданы друг для друга»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "The two of them are meant for each other"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "He whispered into her ear, We're meant for each other"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "We look good together but do you think we are really meant for each other?"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "They aren't meant for each other"
+          }
+         ],
+         "correct_answer": "A"
+     },
+     {
+         "id": "6",
+         "question": "Как будет на английском «Она ищет своего очаровательного принца на белом коне»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "Every little girl grows up wanting to find her prince charming"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "Oh no! I'm not your prince charming"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "She's looking for her prince charming"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "I think you are my prince charming."
+          }
+         ],
+         "correct_answer": "C"
+     },
+     {
+         "id": "7",
+         "question": "Как будет на английском «В Нью-Йорке многие магазины работают 24 на 7 (круглосуточно без выходных)»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "I had to leave my previous apartment because my neighbors played loud music 24/7"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "This pharmacy In New York City is open 24/7"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "New York City is one of the largest cities in the world"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "In New York City, a lot of stores are open 24/7"
+          }
+         ],
+         "correct_answer": "D"
+     },
+     {
+         "id": "8",
+         "question": "Как будет на английском «Моя репутация будет поставлена на карту, если эта сделка не состоится»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "How much money is at stake?"
+          },
+          {
+             "identifier" : "B",
+             "answer" : "My reputation will be at stake if this deal does not happen"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "There is a great deal at stake, so please think carefully"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "There is a great deal at stake, You definitely want to stay with us?"
+          }
+         ],
+         "correct_answer": "B"
+     },
+     {
+         "id": "9",
+         "question": "Как будет на английском «Перестань быть поддакивпющим! Ты должны высказать свое мнение так же, как и все остальные»!?",
+
+
+         "answers": [
+
+          {
+             "identifier" : "A",
+             "answer" : "He is the yes man of our office."
+          },
+          {
+             "identifier" : "B",
+             "answer" : "If you continue to be the yes man, you will never grow as an individual"
+          },
+          {
+             "identifier" : "C",
+             "answer" : "To be the yes man not the best feature"
+          },
+          {
+             "identifier" : "D",
+             "answer" : "Stop being a yes man. You should voice your opinion just like everyone else"
+          }
+         ],
+         "correct_answer": "D"
+     },
+     {
+        "id": "10",
+        "question": "Как будет на английском «Эту куртку он поучил после меня/поношенную»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "I always had hand-me-down clothes growing up because I had two older sisters"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "As a child I was always dressed in my sister’s hand-me-downs and I longed for something new to wear"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "My youngest son is always dressed hand-me-down clothes left over from his older brother"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "This jacket he has a hand-me-down"
+         }
+        ],
+
+        "correct_answer": "D"
+     },
+     {
+        "id": "11",
+        "question": "Как будет на английском «Он любит наряжаться/одеваться и всегда выглядит безупречно»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "They dress themselves up in their finest clothing"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "Please dress up for the dance"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "He like to dress up, and always look put-together"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "He decided to dress up for his new job"
+         }
+        ],
+
+        "correct_answer": "C"
+     },
+     {
+        "id": "12",
+        "question": "Как будет на английском «На моей работе мы одеваемся в повседневну одежду по пятницам»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "I dressed down for the casual party"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "At my job we normally dress down on Fridays"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "I dress down if I know I’m just going to be moving boxes of documents at work"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "He decided to dress down in his new job"
+         }
+        ],
+
+        "correct_answer": "B"
+     },
+     {
+        "id": "13",
+        "question": "Как будет на английском «Он знает азы и хорошо объясняет»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "Anyone who’s been doing this job for a few months, should know the ropes by now"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "I have a partner, a really good partner, Who knows the ropes"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "Once I learn the ropes at my new job, I won’t be so nervous"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "He knows the ropes and is good at explaining things"
+         }
+        ],
+
+        "correct_answer": "D"
+     },
+     {
+        "id": "14",
+        "question": "Как будет на английском «Программирование — это направление/работа, требующее больших усилий»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "The programming is line of work requires lots of effort"
+         },
+         {
+            "identifier" : "B",
+            "answer" : "In my line of work, being surrounded by gadgets is an occupational requirement"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "I believe that the majority of you chose your line of work because you want to help"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "This line of work has a good future"
+         }
+        ],
+
+        "correct_answer": "A"
+     },
+     {
+        "id": "15",
+        "question": "Как будет на английском «Нам всем пришлось отложить наши планы на некоторое время»!?",
+
+
+        "answers": [
+
+         {
+            "identifier" : "A",
+            "answer" : "The building project is on the back burner for now."
+         },
+         {
+            "identifier" : "B",
+            "answer" : "In short, you should not put your ratings and reviews on the back burner"
+         },
+         {
+            "identifier" : "C",
+            "answer" : "We’ve all had to put our plans on the back burner for a while"
+         },
+         {
+            "identifier" : "D",
+            "answer" : "This matter was on the back burner for a long time"
+         }
+        ],
+
+        "correct_answer": "C"
+     }
+
+
+   ]
+ }

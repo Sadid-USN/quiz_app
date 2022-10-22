@@ -12,6 +12,7 @@ class AuthController extends GetxController {
 
   GlobalKey<FormState> signUpFormstate = GlobalKey<FormState>();
   bool isShowPassword = true;
+  bool isShowRepeadPassword = true;
 
   @override
   void onReady() {
@@ -29,6 +30,11 @@ class AuthController extends GetxController {
 
   showPassword() {
     isShowPassword = isShowPassword == true ? false : true;
+    update();
+  }
+
+  showRepeatPassword() {
+    isShowRepeadPassword = isShowRepeadPassword == true ? false : true;
     update();
   }
 

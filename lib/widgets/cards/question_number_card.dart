@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
 
 import 'package:quizapp/widgets/cards/answer_card.dart';
@@ -28,7 +29,7 @@ class QustionNumberCard extends StatelessWidget {
         break;
 
       case AnswerStatus.correct:
-        bgColor = correctAnswerColor;
+        correctAnswerColor;
         break;
 
       case AnswerStatus.wrong:
@@ -37,7 +38,7 @@ class QustionNumberCard extends StatelessWidget {
       case AnswerStatus.notanswered:
         bgColor = Get.isDarkMode
             ? notAnsweredColor.withOpacity(0.3)
-            : correctAnswerColor;
+            : notAnsweredColor;
         break;
 
       default:
@@ -58,7 +59,9 @@ class QustionNumberCard extends StatelessWidget {
           child: Text(
             "$index",
             style: TextStyle(
-              color: status == AnswerStatus.notanswered ? Colors.yellow : null,
+              color: status == AnswerStatus.notanswered
+                  ? startPrimaryDarkColor
+                  : null,
             ),
           ),
         ),

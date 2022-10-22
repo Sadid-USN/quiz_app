@@ -5,8 +5,10 @@ import 'package:quizapp/configs/themes/ui_parameters.dart';
 
 const onSurfaceTextColor = Colors.white;
 const correctAnswerColor = Color.fromARGB(255, 142, 226, 141);
-const wrongAnswerColor = Color.fromARGB(255, 244, 106, 96);
-const notAnsweredColor = Color.fromARGB(255, 238, 248, 94);
+const wrongAnswerColor = Color.fromARGB(255, 218, 15, 0);
+var notAnsweredColor = Colors.white.withOpacity(0.5);
+var notAnsweredColorText =
+    const Color.fromARGB(255, 53, 63, 251).withOpacity(0.5);
 
 const lightGradient = LinearGradient(
   begin: Alignment.topLeft,

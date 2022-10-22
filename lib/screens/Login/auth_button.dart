@@ -7,11 +7,13 @@ class AuthButton extends StatelessWidget {
   final void Function()? onPressed;
   final String? title;
   final SvgPicture? image;
+  final Color color;
   const AuthButton({
     Key? key,
     this.onPressed,
     this.title,
     this.image,
+    this.color = Colors.white,
     required this.height,
     required this.width,
   }) : super(key: key);
@@ -25,7 +27,7 @@ class AuthButton extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-            color: Theme.of(context).cardColor,
+            color: color,
             boxShadow: const [
               BoxShadow(
                   color: Colors.black26,

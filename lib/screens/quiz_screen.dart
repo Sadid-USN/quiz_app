@@ -69,8 +69,13 @@ class QuizScreen extends GetView<QuestionsController> {
             child: Column(
               children: [
                 if (controller.loadingSatatus.value == LoadingStatus.loading)
-                  Expanded(
-                    child: Lottie.asset(AppAssets.loading),
+                  Center(
+                    child: SizedBox(
+                      height: MediaQuery.of(context).size.height / 2 * 0.5,
+                      child: Lottie.asset(
+                        AppAssets.loading,
+                      ),
+                    ),
                   ),
                 if (controller.loadingSatatus.value == LoadingStatus.completed)
                   Expanded(
@@ -78,7 +83,7 @@ class QuizScreen extends GetView<QuestionsController> {
                       padding: const EdgeInsets.only(top: 30.0),
                       child: Container(
                         padding: const EdgeInsets.only(top: 20),
-                        height: MediaQuery.of(context).size.height / 2 * 1.9,
+                        height: MediaQuery.of(context).size.height / 2 * 1.7,
                         decoration: BoxDecoration(
                           color: Colors.brown.withOpacity(0.4),
                           borderRadius: const BorderRadius.only(
@@ -101,6 +106,7 @@ class QuizScreen extends GetView<QuestionsController> {
                                 id: "answer_list",
                                 builder: (controller) {
                                   return ListView.separated(
+                                    physics: const BouncingScrollPhysics(),
                                     padding: const EdgeInsets.only(top: 30),
                                     shrinkWrap: true,
                                     itemCount: controller
@@ -132,49 +138,53 @@ class QuizScreen extends GetView<QuestionsController> {
                       ),
                     ),
                   ),
-                ColoredBox(
-                  color: Colors.brown.withOpacity(0.4),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Visibility(
-                        replacement: const SizedBox(
-                          height: 50,
-                          width: 50,
-                        ),
-                        visible: controller.isFirstQuestion,
-                        child: GestureDetector(
-                          onTap: () {
-                            controller.prevQuestion();
-                          },
-                          child: Card(
-                            child: SvgPicture.asset(
-                              AppAssets.arrowbeack,
-                              height: 50,
+                SizedBox(
+                  height: 90,
+                  child: ColoredBox(
+                    color: Colors.brown.withOpacity(0.4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Visibility(
+                          replacement: const SizedBox(
+                            height: 50,
+                            width: 50,
+                          ),
+                          visible: controller.isFirstQuestion,
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.prevQuestion();
+                            },
+                            child: Card(
+                              child: SvgPicture.asset(
+                                AppAssets.arrowbeack,
+                                height: 50,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Visibility(
-                        replacement: const SizedBox(
-                          height: 50,
-                          width: 50,
-                        ),
-                        visible: controller.loadingSatatus.value ==
-                            LoadingStatus.completed,
-                        child: AuthButton(
-                            onPressed: () {
-                              controller.isLastQuestion
-                                  ? Get.toNamed(TestOverviewScreen.routName)
-                                  : controller.nextQuestion();
-                            },
-                            title: controller.isLastQuestion
-                                ? "Completed"
-                                : "Next",
+                        Visibility(
+                          replacement: const SizedBox(
                             height: 50,
-                            width: MediaQuery.of(context).size.width / 2 * 1.3),
-                      ),
-                    ],
+                            width: 50,
+                          ),
+                          visible: controller.loadingSatatus.value ==
+                              LoadingStatus.completed,
+                          child: AuthButton(
+                              onPressed: () {
+                                controller.isLastQuestion
+                                    ? Get.toNamed(TestOverviewScreen.routName)
+                                    : controller.nextQuestion();
+                              },
+                              title: controller.isLastQuestion
+                                  ? "Completed"
+                                  : "Next",
+                              height: 50,
+                              width:
+                                  MediaQuery.of(context).size.width / 2 * 1.3),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

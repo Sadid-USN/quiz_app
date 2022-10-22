@@ -19,7 +19,7 @@ class BgDecoration extends StatelessWidget {
           decoration: BoxDecoration(
             color: showGradient
                 ? null
-                : Theme.of(context).primaryColor.withOpacity(0.3),
+                : Theme.of(context).primaryColor.withOpacity(1.0),
             gradient: showGradient ? lightGradient : null,
           ),
           child: CustomPaint(

@@ -29,7 +29,7 @@ class LoginScreen extends GetView<AuthController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 100.0,
+                  height: 100,
                 ),
                 Lottie.asset(
                   AppAssets.quiz,
@@ -81,13 +81,13 @@ class LoginScreen extends GetView<AuthController> {
                 GetBuilder<AuthController>(
                   builder: (controller) => MyField(
                     onTapIcon: () {
-                      controller.showPassword();
+                      controller.showRepeatPassword();
                     },
-                    hintText: 'Password',
+                    hintText: 'Repeat Password',
                     isNumber: false,
-                    label: 'Password',
-                    obscureText: controller.isShowPassword,
-                    suffixIcon: controller.isShowPassword == false
+                    label: 'Repeat Password',
+                    obscureText: controller.isShowRepeadPassword,
+                    suffixIcon: controller.isShowRepeadPassword == false
                         ? Icons.visibility_outlined
                         : Icons.visibility_off_outlined,
                     //  controller: controller.loginPassword,
