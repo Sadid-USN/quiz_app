@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:quizapp/controller/theme_controller.dart';
 import 'package:quizapp/routes/bindings/inti_bindings.dart';
 import 'package:quizapp/routes/routes.dart';
-import 'package:quizapp/screens/splash/splash_screen.dart';
+import 'package:quizapp/screens/data_uploader_screen.dart';
 
 import 'firebase_options.dart';
 
@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        //home: DataUploadedScreen(),
-        home: const SplashScreen(),
+        home: DataUploadedScreen(),
+        // home: const SplashScreen(),
         getPages: Routes.routes(),
         debugShowCheckedModeBanner: false,
         title: 'Quiz',

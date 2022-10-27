@@ -1,0 +1,248 @@
+{
+    "id": "ppr004",
+    "title": "English-4",
+    "image": "https://bit.ly/3TAp3cM",
+    "time_seconds": 900,
+    "description": "Топ 15 Английских выражений часть 4",
+
+    "questions" : [
+
+      {
+          "id": "1",
+          "question": "Как будет на английском «Он никогда не был действительно хорош в таких вещах»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "he was nervous at that moment"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "He was never really good at stuff"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "he was there the other day"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "he thought about it for a long time"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+          "id": "2",
+          "question": "Как будет на английском «Ты все ещё злишься на меня?»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Are you kidding me?"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "did you forget about it?"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "are you still hungry?"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Are you still mad at me?"
+           }
+          ],
+          "correct_answer": "D"
+      },
+      {
+          "id": "3",
+          "question": "Как будет на английском «Я был очень зол на него/неё»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "I was at ease with him/her"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "I was very angry with him/her"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "I was happy with you"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "I had fun with you"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+          "id": "4",
+          "question": "Как будет на английском «Я не боюсь высоты»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "I'am not afraid of heights"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "I'm not afraid to take risks"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "I'm not afraid to lose"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "I'm not afraid to be afraid"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "5",
+          "question": "Как будет на английском «Перестань думать о том, чего ты не сделал, просто начни делать это прямо сейчас»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "stop wishing start doing"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Stop being weak"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Stop thinking about that it"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Stop thinking about what you didn't do, Just start doing it now"
+           }
+          ],
+          "correct_answer": "D"
+      },
+      {
+          "id": "6",
+          "question": "Как будет на английском «Спасибо за гостеприимство»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Thank you for welcoming guests to your home"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Thanks for the hospitality"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Your people are very hospitable"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Thank you for showing me the way to the hospital"
+           }
+          ],
+          "correct_answer": "A"
+      },
+      {
+          "id": "7",
+          "question": "Как будет на английском «Инвестируй в знания и тебе не придется мечтать о счастливом будущем»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Invest in real estate as much as possible"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "Invest in knowledge and you won't have to dream about a happy future"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Don't be afraid to invest in knowledge"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Knowledge is the best thing you can invest"
+           }
+          ],
+          "correct_answer": "B"
+      },
+      {
+          "id": "8",
+          "question": "Как будет на английском «Вы несете ответственность за членов своей семьи»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Parents are responsible for their children"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "You are responsible for your little sister"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "Everyone is responsible"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "You are responsible for your family members "
+           }
+          ],
+          "correct_answer": "D"
+      },
+      {
+          "id": "9",
+          "question": "Как будет на английском «большинство из нас, на самом деле, далеки от цели/истины»!?",
+
+
+          "answers": [
+
+           {
+              "identifier" : "A",
+              "answer" : "Most of us are actually far from the mark"
+           },
+           {
+              "identifier" : "B",
+              "answer" : "And indeed, I was very far from the mark"
+           },
+           {
+              "identifier" : "C",
+              "answer" : "This may not be so far from the mark"
+           },
+           {
+              "identifier" : "D",
+              "answer" : "Our coutry in the ranking of the attractiveness of doing business is far from the mark"
+           }
+          ],
+          "correct_answer": "A"
+      }
+
+
+
+    ]
+  }

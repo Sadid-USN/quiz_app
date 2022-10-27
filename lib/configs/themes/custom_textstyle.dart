@@ -24,7 +24,7 @@ var answerText = GoogleFonts.ptSerif(
 );
 var appBarText = GoogleFonts.ptSerif(
   fontWeight: FontWeight.bold,
-  fontSize: 18.0,
+  fontSize: 20.0,
   color: Get.isDarkMode ? startPrimaryDarkColor : onSurfaceTextColor,
 );
 var headerText = GoogleFonts.ptSerif(

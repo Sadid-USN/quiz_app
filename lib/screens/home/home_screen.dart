@@ -91,19 +91,11 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                         ),
                       ),
                       Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.lime.withOpacity(0.4),
-                            borderRadius: const BorderRadius.vertical(
-                              top: Radius.circular(16.0),
-                              bottom: Radius.circular(16.0),
-                            ),
-                          ),
-                          // padding: const EdgeInsets.all(5.0),
-                          margin: const EdgeInsets.symmetric(
-                              horizontal: 5, vertical: 10),
-                          child: Obx(
-                            () => ListView.separated(
+                        child: Obx(
+                          () => Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: ListView.separated(
                               padding: ChangeBrightness.mobileScreenPadding,
                               separatorBuilder: (BuildContext context, index) {
                                 return const SizedBox(

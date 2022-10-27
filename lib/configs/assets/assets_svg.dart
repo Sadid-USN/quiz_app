@@ -1,11 +1,13 @@
 class AppAssets {
   static const svgPath = 'assets/svg/';
   static const lottiePath = 'assets/lotties/';
+  static const gifPath = 'assets/Gif/';
 
   static const muneLeft = '${svgPath}menuleft.svg';
   static const bulb = '${svgPath}bulb.svg';
   static const googleSvg = '${svgPath}google.svg';
   static const arrowbeack = '${svgPath}arrowbeack.svg';
+  static const fireworks = '${gifPath}fireworks.gif';
 
   //! Loties
   static const arrowR = '${lottiePath}swipright.json';

@@ -6,7 +6,7 @@ import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/firebase/loading_status.dart';
-import 'package:quizapp/screens/Login/auth_button.dart';
+import 'package:quizapp/screens/result_screen.dart';
 import 'package:quizapp/screens/test_overview_screen.dart';
 import 'package:quizapp/widgets/cards/answer_card.dart';
 import 'package:quizapp/widgets/bg_decoration.dart';
@@ -155,13 +155,21 @@ class QuizScreen extends GetView<QuestionsController> {
                             onTap: () {
                               controller.prevQuestion();
                             },
-                            child: Card(
+                            child: AnimatedContainer(
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(12))),
+                              duration: const Duration(milliseconds: 300),
                               child: SvgPicture.asset(
                                 AppAssets.arrowbeack,
                                 height: 50,
                               ),
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          width: 3,
                         ),
                         Visibility(
                           replacement: const SizedBox(
@@ -170,18 +178,31 @@ class QuizScreen extends GetView<QuestionsController> {
                           ),
                           visible: controller.loadingSatatus.value ==
                               LoadingStatus.completed,
-                          child: AuthButton(
-                              onPressed: () {
-                                controller.isLastQuestion
-                                    ? Get.toNamed(TestOverviewScreen.routName)
-                                    : controller.nextQuestion();
-                              },
-                              title: controller.isLastQuestion
-                                  ? "Completed"
-                                  : "Next",
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.isLastQuestion
+                                  ? Get.toNamed(ResultScreen.routName)
+                                  : controller.nextQuestion();
+                            },
+                            child: AnimatedContainer(
+                              decoration: BoxDecoration(
+                                  color: controller.questionIndex.isEven
+                                      ? Colors.lightBlue.withOpacity(0.4)
+                                      : Colors.white,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(12))),
+                              alignment: Alignment.center,
                               height: 50,
                               width:
-                                  MediaQuery.of(context).size.width / 2 * 1.3),
+                                  MediaQuery.of(context).size.width / 2 * 1.3,
+                              duration: const Duration(milliseconds: 200),
+                              child: Text(
+                                controller.isLastQuestion
+                                    ? "Completed"
+                                    : "Next",
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),

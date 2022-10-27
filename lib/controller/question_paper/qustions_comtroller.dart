@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:animate_icons/animate_icons.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -12,13 +13,16 @@ import 'package:quizapp/screens/result_screen.dart';
 
 //! 3:15
 class QuestionsController extends GetxController {
+  AnimateIconController animateIconController = AnimateIconController();
   final loadingSatatus = LoadingStatus.loading.obs;
   late QuestionModel questionModel;
   final allQuestions = <Questions>[];
   final questionIndex = 0.obs;
 
   bool get isFirstQuestion => questionIndex.value > 0;
+  bool get isCurrenQuestion => questionIndex.value == questionIndex.value;
   bool get isLastQuestion => questionIndex.value >= allQuestions.length - 1;
+  bool onceClick = false;
 
   Rxn<Questions> currentQuestion = Rxn<Questions>();
 
@@ -30,12 +34,19 @@ class QuestionsController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-
+    animateIconController = AnimateIconController();
     // ignore: no_leading_underscores_for_local_identifiers
     final _questionModel = Get.arguments as QuestionModel;
     loadData(_questionModel);
     print('.......On Readt......');
 
+    update();
+  }
+
+  @override
+  void dispose() {
+    animateIconController;
+    super.dispose();
     update();
   }
 
@@ -85,8 +96,11 @@ class QuestionsController extends GetxController {
     }
   }
 
+  // ignore: unused_field
+
   void selectedAnswer(String? answer) {
     currentQuestion.value!.selectedAnswer = answer;
+
     update(['answer_list']);
   }
 

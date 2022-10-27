@@ -3,14 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:quizapp/firebase/refrences.dart';
-import 'package:quizapp/screens/Login/login_screen.dart';
+import 'package:quizapp/screens/Login/sign_up_page.dart';
 import 'package:quizapp/widgets/dialogs/dialog_widget.dart';
 
 class AuthController extends GetxController {
-  late TextEditingController loginEmail;
-  late TextEditingController loginPassword;
+  TextEditingController loginEmail = TextEditingController();
+  TextEditingController loginPassword = TextEditingController();
+
+  TextEditingController sginUpEmailController = TextEditingController();
+  TextEditingController signUpPasswordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
 
   GlobalKey<FormState> signUpFormstate = GlobalKey<FormState>();
+  GlobalKey<FormState> loginFormstate = GlobalKey<FormState>();
   bool isShowPassword = true;
   bool isShowRepeadPassword = true;
 
@@ -20,8 +25,36 @@ class AuthController extends GetxController {
     super.onReady();
   }
 
+  clearAllControllers() {
+    sginUpEmailController.clear();
+    signUpPasswordController.clear();
+    confirmPasswordController.clear();
+
+    loginEmail.clear();
+    loginPassword.clear();
+  }
+
+  @override
+  void dispose() {
+    loginEmail.dispose();
+    loginPassword.dispose();
+
+    sginUpEmailController.dispose();
+    signUpPasswordController.dispose();
+    confirmPasswordController.dispose();
+
+    super.dispose();
+  }
+
   signUpValidator() {
     if (signUpFormstate.currentState!.validate()) {
+    } else {
+      print('not Valid');
+    }
+  }
+
+  loginValidator() {
+    if (loginFormstate.currentState!.validate()) {
       print('Validate');
     } else {
       print('not Valid');
@@ -128,10 +161,58 @@ class AuthController extends GetxController {
   }
 
   void goToLoginScreen() {
-    Get.toNamed(LoginScreen.routeName);
+    Get.offAllNamed(SignUpPage.routeName);
   }
 
   void goToIntroductionScreen() {
     Get.offAllNamed('/introduction');
   }
+
+  Future signeIn(
+    String email,
+    String password,
+  ) async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email.trim(),
+      password: password.trim(),
+    );
+  }
+
+  // ! create user
+  Future signeUp(
+    String email,
+    String password,
+    String confirmPasword,
+  ) async {
+    if (passwordConfirm(password, confirmPasword)) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email.trim(),
+        password: password.trim(),
+      );
+      // add user details
+      // addUserDetails(firstName.trim(), lastName.trim(),);
+    }
+  }
+
+  bool passwordConfirm(
+    String password,
+    String confirmPassword,
+  ) {
+    if (password.trim() == confirmPassword.trim()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // Future addUserDetails(
+  //   String firstName,
+  //   String lastName,
+  //   int age,
+  // ) async {
+  //   await FirebaseFirestore.instance.collection('emailUsers').add({
+  //     "name": firstName,
+  //     "last": lastName,
+  //   });
+  // }
 }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
-import 'package:quizapp/configs/themes/app_icons.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
 import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
@@ -28,7 +27,7 @@ class QuizCard extends GetView<FirebaseStorageController> {
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: const [
           BoxShadow(
-              color: Colors.black26, offset: Offset(0.0, 2.0), blurRadius: 6.0)
+              color: Colors.black26, offset: Offset(3.0, 3.0), blurRadius: 6.0),
         ],
       ),
       child: InkWell(
@@ -121,20 +120,20 @@ class QuizCard extends GetView<FirebaseStorageController> {
                   right: -10.0,
                   child: GestureDetector(
                     child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12.0, vertical: 5.0),
-                        decoration: BoxDecoration(
-                          color: Colors.pink[300],
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(8),
-                            bottomRight: Radius.circular(10.0),
-                          ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0, vertical: 5.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[200],
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          bottomRight: Radius.circular(10.0),
                         ),
-                        child: const Icon(
-                          AppIcon.trophyOutLine,
-                          color: Colors.white,
-                          size: 25,
-                        )),
+                      ),
+                      child: Lottie.network(
+                        'https://assets5.lottiefiles.com/packages/lf20_orshrv.json',
+                        height: 25,
+                      ),
+                    ),
                   ))
             ],
           ),

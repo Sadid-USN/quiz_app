@@ -2,7 +2,8 @@ import 'package:get/get.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
-import 'package:quizapp/screens/Login/login_screen.dart';
+import 'package:quizapp/screens/Login/login_page.dart';
+import 'package:quizapp/screens/Login/sign_up_page.dart';
 import 'package:quizapp/screens/answer_check_screen.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:quizapp/screens/introduction/introduction.dart';
@@ -22,8 +23,12 @@ class Routes {
           page: () => const IntroductionScreen(),
         ),
         GetPage(
-          name: LoginScreen.routeName,
-          page: () => const LoginScreen(),
+          name: SignUpPage.routeName,
+          page: () => const SignUpPage(),
+        ),
+        GetPage(
+          name: LoginPage.routeName,
+          page: () => const LoginPage(),
         ),
         GetPage(
             name: HomeScreen.routName,

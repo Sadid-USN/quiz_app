@@ -1,7 +1,11 @@
+import 'package:animate_icons/animate_icons.dart';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
+import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 
 enum AnswerStatus {
   correct,
@@ -11,10 +15,11 @@ enum AnswerStatus {
 }
 
 class AnswerCard extends StatelessWidget {
+  QuestionsController controller = Get.put(QuestionsController());
   final String answer;
   final bool isSelected;
   final VoidCallback onTap;
-  const AnswerCard({
+  AnswerCard({
     Key? key,
     required this.answer,
     this.isSelected = false,
@@ -39,9 +44,34 @@ class AnswerCard extends StatelessWidget {
                   color: isSelected
                       ? answerSelectedColor()
                       : answerBorderColor())),
-          child: Text(
-            answer,
-            style: isSelected ? appBarText : null,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  answer,
+                  style: isSelected ? appBarText : null,
+                ),
+              ),
+              AnimateIcons(
+                startIcon: Icons.copy,
+                endIcon: Icons.copy,
+                controller: controller.animateIconController,
+                size: 25.0,
+                onStartIconPress: () {
+                  FlutterClipboard.copy(answer);
+
+                  return true;
+                },
+                onEndIconPress: () {
+                  return true;
+                },
+                duration: const Duration(milliseconds: 250),
+                startIconColor: Colors.white,
+                endIconColor: Colors.white,
+                clockwise: false,
+              ),
+            ],
           ),
         ));
   }
