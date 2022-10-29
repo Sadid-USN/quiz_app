@@ -122,9 +122,9 @@ class QuizCard extends GetView<FirebaseStorageController> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12.0, vertical: 5.0),
-                      decoration: BoxDecoration(
-                        color: Colors.blue[200],
-                        borderRadius: const BorderRadius.only(
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(255, 119, 163, 201),
+                        borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(8),
                           bottomRight: Radius.circular(10.0),
                         ),

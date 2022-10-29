@@ -25,6 +25,10 @@ class MyField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w500,
+      ),
       obscureText: obscureText == null || obscureText == false ? false : true,
       keyboardType: isNumber
           ? const TextInputType.numberWithOptions(decimal: true)

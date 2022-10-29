@@ -1,8 +1,11 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
+import 'package:quizapp/screens/home/our_friends_screen.dart';
+import 'package:quizapp/widgets/louncher_button.dart';
 
 class MenuScreen extends GetView<MyZoomDrawerController> {
   const MenuScreen({Key? key}) : super(key: key);
@@ -13,7 +16,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
     return Container(
       width: double.maxFinite,
       decoration: BoxDecoration(
-        color: Colors.indigo[400],
+        color: Colors.deepPurple[400],
       ),
       child: SafeArea(
           child: Stack(
@@ -35,33 +38,59 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Obx(
-                  () => controller.user.value == null
-                      ? const SizedBox()
-                      : Column(
-                          children: [
-                            Text(
-                              controller.user.value!.displayName ?? '',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 18.0,
-                                  color: onSurfaceTextColor),
-                            ),
-                            const SizedBox(
-                              height: 16.0,
-                            ),
-                            CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                  controller.user.value!.photoURL ?? ''),
-                              radius: 40,
-                            )
-                          ],
+                // Obx(
+                //   () => controller.user.value == null
+                //       ? const SizedBox()
+                //       :
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(OurFriendsScreen.routName);
+                      },
+                      child: AvatarGlow(
+                        glowColor: Colors.white,
+                        endRadius: 60.0,
+                        duration: const Duration(milliseconds: 2000),
+                        repeat: true,
+                        showTwoGlows: true,
+                        repeatPauseDuration: const Duration(milliseconds: 100),
+                        child: Image.asset(
+                          'assets/icons/logo.png',
+                          height: 90,
                         ),
+                      ),
+                    ),
+
+                    const Text(
+                      'Наши друзья',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 18.0,
+                          color: onSurfaceTextColor),
+                    ),
+                    // CircleAvatar(
+                    //   backgroundImage: NetworkImage(
+                    //       controller.user.value!.photoURL ?? ''),
+                    //   radius: 40,
+                    // ),
+                    // const SizedBox(
+                    //   height: 16.0,
+                    // ),
+                    // Text(
+                    //   controller.user.value!.displayName ?? '',
+                    //   style: const TextStyle(
+                    //       fontWeight: FontWeight.w900,
+                    //       fontSize: 18.0,
+                    //       color: onSurfaceTextColor),
+                    // ),
+                  ],
                 ),
+
                 const Spacer(
                   flex: 1,
                 ),
-                _DrawerButton(
+                LouncherButton(
                   color: onSurfaceTextColor,
                   icon: Icons.email_outlined,
                   size: 20,
@@ -70,7 +99,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     controller.email();
                   },
                 ),
-                _DrawerButton(
+                LouncherButton(
                   color: Colors.red,
                   icon: FontAwesomeIcons.instagram,
                   size: 20,
@@ -79,7 +108,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     controller.instagramm();
                   },
                 ),
-                _DrawerButton(
+                LouncherButton(
                   color: Colors.blue,
                   icon: FontAwesomeIcons.facebook,
                   size: 20,
@@ -88,7 +117,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     controller.facebook();
                   },
                 ),
-                _DrawerButton(
+                LouncherButton(
                   color: Colors.redAccent,
                   icon: FontAwesomeIcons.youtube,
                   size: 18,
@@ -100,7 +129,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                 const Spacer(
                   flex: 2,
                 ),
-                _DrawerButton(
+                LouncherButton(
                   color: onSurfaceTextColor,
                   icon: Icons.logout_outlined,
                   size: 20,
@@ -118,36 +147,5 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
         ],
       )),
     );
-  }
-}
-
-class _DrawerButton extends StatelessWidget {
-  const _DrawerButton(
-      {Key? key,
-      required this.icon,
-      required this.size,
-      required this.label,
-      required this.color,
-      required this.onPressed})
-      : super(key: key);
-  final IconData icon;
-  final Color color;
-  final double? size;
-  final String label;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton.icon(
-        onPressed: onPressed,
-        icon: Icon(
-          icon,
-          size: size,
-          color: color,
-        ),
-        label: Text(
-          label,
-          style: const TextStyle(color: onSurfaceTextColor),
-        ));
   }
 }

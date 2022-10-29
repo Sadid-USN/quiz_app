@@ -25,7 +25,7 @@ class IntroductionScreen extends StatelessWidget {
             width: 50.0,
           ),
           const Text(
-            'This quiz will help you expand your horizons of knowledge to a new level, choose a quiz from the category that interests you.',
+            'Learn English like native speakers so that your speech is beautiful, expressive and natural. The QuizEn app contains most common phrases by taking it you will raise your English to a new level.',
             textAlign: TextAlign.start,
             style: TextStyle(
               fontWeight: FontWeight.bold,

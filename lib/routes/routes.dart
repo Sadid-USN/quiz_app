@@ -6,6 +6,7 @@ import 'package:quizapp/screens/Login/login_page.dart';
 import 'package:quizapp/screens/Login/sign_up_page.dart';
 import 'package:quizapp/screens/answer_check_screen.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
+import 'package:quizapp/screens/home/our_friends_screen.dart';
 import 'package:quizapp/screens/introduction/introduction.dart';
 import 'package:quizapp/screens/quiz_screen.dart';
 import 'package:quizapp/screens/result_screen.dart';
@@ -29,6 +30,10 @@ class Routes {
         GetPage(
           name: LoginPage.routeName,
           page: () => const LoginPage(),
+        ),
+        GetPage(
+          name: OurFriendsScreen.routName,
+          page: () => const OurFriendsScreen(),
         ),
         GetPage(
             name: HomeScreen.routName,

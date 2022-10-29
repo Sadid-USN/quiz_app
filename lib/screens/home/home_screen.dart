@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
@@ -18,7 +19,7 @@ class HomeScreen extends GetView<FirebaseStorageController> {
     return WillPopScope(
       onWillPop: controller.exitDialog,
       child: Scaffold(
-        backgroundColor: Colors.indigo[400],
+        backgroundColor: Colors.deepPurple[400],
         body: GetBuilder<FirebaseStorageController>(
           builder: (_) {
             return ZoomDrawer(
@@ -59,6 +60,7 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                 vertical: 10,
                               ),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   SvgPicture.asset(
                                     AppAssets.bulb,
@@ -70,17 +72,22 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                     width: 5,
                                   ),
                                   const Text(
-                                    'Викторина знаний',
+                                    'Викторина английского языка',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 16),
                                   ),
+                                  const Spacer(),
+                                  Lottie.network(
+                                      'https://assets10.lottiefiles.com/packages/lf20_szrbrL.json',
+                                      height: 45),
+                                  const Spacer(),
                                 ],
                               ),
                             ),
                             const Padding(
                               padding: EdgeInsets.only(left: 8),
                               child: Text(
-                                'Чему хотите научиться сегодня?',
+                                'Сделай свою речь живой и естественной',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 30,

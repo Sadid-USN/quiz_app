@@ -27,6 +27,11 @@ var appBarText = GoogleFonts.ptSerif(
   fontSize: 20.0,
   color: Get.isDarkMode ? startPrimaryDarkColor : onSurfaceTextColor,
 );
+var friendsText = GoogleFonts.varta(
+  fontWeight: FontWeight.normal,
+  fontSize: 14.0,
+  color: Get.isDarkMode ? startPrimaryDarkColor : onSurfaceTextColor,
+);
 var headerText = GoogleFonts.ptSerif(
   fontWeight: FontWeight.bold,
   fontSize: 25.0,
