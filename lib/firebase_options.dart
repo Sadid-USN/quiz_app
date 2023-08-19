@@ -68,7 +68,7 @@ class DefaultFirebaseOptions {
     projectId: 'quizapp-95cbd',
     storageBucket: 'quizapp-95cbd.appspot.com',
     iosClientId: '1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc.apps.googleusercontent.com',
-    iosBundleId: 'com.example.quizapp',
+    iosBundleId: 'com.darulasar.quizapp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -78,6 +78,6 @@ class DefaultFirebaseOptions {
     projectId: 'quizapp-95cbd',
     storageBucket: 'quizapp-95cbd.appspot.com',
     iosClientId: '1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc.apps.googleusercontent.com',
-    iosBundleId: 'com.example.quizapp',
+    iosBundleId: 'com.darulasar.quizapp',
   );
 }

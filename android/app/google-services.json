@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1098795874442:android:7460656d2ef2efe2fc1573",
         "android_client_info": {
-          "package_name": "com.example.quizapp"
+          "package_name": "com.darulasar.quizapp"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "1098795874442-okm7a4foqr36gm1ass4i8hmiuqe032i4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.quizapp",
+            "package_name": "com.darulasar.quizapp",
             "certificate_hash": "3738c3250ee5323d8d322d792149a3b2a69949db"
           }
         },
@@ -42,7 +42,7 @@
               "client_id": "1098795874442-jf84ig144mn3lsrk4r1abnm6iah2acfc.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.quizapp"
+                "bundle_id": "com.darulasar.quizapp"
               }
             }
           ]

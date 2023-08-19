@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_zoom_drawer/config.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+
 import 'package:get/get.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
