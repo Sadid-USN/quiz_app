@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
 
 class IntroductionScreen extends StatelessWidget {
@@ -24,10 +25,11 @@ class IntroductionScreen extends StatelessWidget {
             height: 50.0,
             width: 50.0,
           ),
-          const Text(
-            'Learn English like native speakers so that your speech is beautiful, expressive and natural. The QuizEn app contains most common phrases by taking it you will raise your English to a new level.',
+            Text(
+           S.of(context).introduction,
             textAlign: TextAlign.start,
-            style: TextStyle(
+            style: const TextStyle(
+              fontSize: 16,
               fontWeight: FontWeight.bold,
               color: onSurfaceTextColor,
             ),

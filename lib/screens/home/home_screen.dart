@@ -7,6 +7,7 @@ import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
+import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/screens/home/menu_screen.dart';
 import 'package:quizapp/screens/home/quiz_card.dart';
 
@@ -71,9 +72,9 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const Text(
-                                    'Викторина английского языка',
-                                    style: TextStyle(
+                                   Text(
+                                    S.of(context).englishQuizText,
+                                    style: const TextStyle(
                                         color: Colors.white, fontSize: 16),
                                   ),
                                   const Spacer(),
@@ -84,11 +85,11 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                 ],
                               ),
                             ),
-                            const Padding(
+                             Padding(
                               padding: EdgeInsets.only(left: 8),
                               child: Text(
-                                'Сделай свою речь живой и естественной',
-                                style: TextStyle(
+                                S.of(context).makeYourSpeechLiveText,
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold),

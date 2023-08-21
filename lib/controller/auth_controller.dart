@@ -144,6 +144,7 @@ class AuthController extends GetxController {
   void showLoginDialog(BuildContext context) {
     Get.dialog(
       Dialogs.startDialog(
+        context: context,
         onTap: () {
           Get.back();
           goToLoginScreen();

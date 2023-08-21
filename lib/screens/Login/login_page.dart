@@ -5,6 +5,7 @@ import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/functions/validator.dart';
+import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/screens/Login/auth_button.dart';
 import 'package:quizapp/screens/Login/sign_up_page.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
@@ -95,7 +96,7 @@ class LoginPage extends GetView<AuthController> {
                   },
                   height: 50,
                   width: MediaQuery.of(context).size.width,
-                  title: 'Login',
+                  title: S.of(context).login,
                 ),
                 const SizedBox(
                   height: 20.0,

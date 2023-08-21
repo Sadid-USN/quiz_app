@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
+import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/screens/home/our_friends_screen.dart';
 import 'package:quizapp/widgets/louncher_button.dart';
 
@@ -62,9 +63,9 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                       ),
                     ),
 
-                    const Text(
-                      'Наши друзья',
-                      style: TextStyle(
+                     Text(
+                      S.of(context).ourFriends,
+                      style: const TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 18.0,
                           color: onSurfaceTextColor),
@@ -133,7 +134,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                   color: onSurfaceTextColor,
                   icon: Icons.logout_outlined,
                   size: 20,
-                  label: 'Выйти из аккаунта',
+                  label: S.of(context).signOut,
                   onPressed: () {
                     controller.signOut();
                   },
