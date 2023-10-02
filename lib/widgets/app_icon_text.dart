@@ -16,13 +16,13 @@ class AppIconAndText extends StatelessWidget {
         Icon(
           Icons.quiz_outlined,
           size: 20,
-          color: Get.isDarkMode ? Colors.white : Colors.deepOrange,
+          color: Get.isDarkMode ? Colors.black : Colors.deepOrange,
         ),
         text_1,
         Icon(
           Icons.timer_outlined,
           size: 20,
-          color: Get.isDarkMode ? Colors.white : Colors.deepOrange,
+          color: Get.isDarkMode ? Colors.black : Colors.deepOrange,
         ),
         text_2
       ],

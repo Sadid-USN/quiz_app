@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/controller/zoom_drawer_controller.dart';
 import 'package:quizapp/screens/home/home_screen.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -23,7 +24,7 @@ class OurFriendsScreen extends GetView<MyZoomDrawerController> {
       player: YoutubePlayer(controller: controller.controller),
       builder: (context, player) {
         return Scaffold(
-          backgroundColor: Colors.deepPurple[400],
+          backgroundColor: onSurface,
           appBar: AppBar(
             centerTitle: true,
             leading: GestureDetector(
@@ -95,7 +96,7 @@ class OurFriendsScreen extends GetView<MyZoomDrawerController> {
                           const Text(
                             '@_jseng',
                             style: TextStyle(
-                                color: onSurfaceTextColor, fontSize: 14),
+                                color: onSurface, fontSize: 14),
                           ),
                         ],
                       ),
@@ -112,7 +113,7 @@ class OurFriendsScreen extends GetView<MyZoomDrawerController> {
                           const Text(
                             'JSENG',
                             style: TextStyle(
-                                color: onSurfaceTextColor, fontSize: 14),
+                                color: onSurface, fontSize: 14),
                           ),
                         ],
                       ),
@@ -130,7 +131,7 @@ class OurFriendsScreen extends GetView<MyZoomDrawerController> {
                           const Text(
                             'jseng_tg',
                             style: TextStyle(
-                                color: onSurfaceTextColor, fontSize: 14),
+                                color: onSurface, fontSize: 14),
                           ),
                         ],
                       ),

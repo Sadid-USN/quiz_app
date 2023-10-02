@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ourFriends": MessageLookupByLibrary.simpleMessage("Our friends"),
         "signOut": MessageLookupByLibrary.simpleMessage("Sign out"),
         "signUpText":
-            MessageLookupByLibrary.simpleMessage("Sign in with google account")
+            MessageLookupByLibrary.simpleMessage("Sign in with google account"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme")
       };
 }

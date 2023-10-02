@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:quizapp/common/custom_app_bar.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/screens/result_screen.dart';
 import 'package:quizapp/widgets/bg_decoration.dart';
@@ -139,15 +140,12 @@ class CorrerctAnswer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(width: 2, color: onSurfaceTextColor)),
+          border: Border.all(width: 2, color: onSurface)),
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Text(
         answer,
-        style: const TextStyle(
-          color: correctAnswerColor,
-          fontWeight: FontWeight.bold,
-        ),
+        style: Theme.of(context).textTheme.titleSmall,
       ),
     );
   }
@@ -164,13 +162,13 @@ class WrongAnswer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(width: 2, color: onSurfaceTextColor)),
+          border: Border.all(width: 2, color: onSurface)),
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Text(
         wrongAnswer,
         style: const TextStyle(
-          color: wrongAnswerColor,
+          color: Colors.red,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -189,13 +187,13 @@ class NotAnswered extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(width: 2, color: onSurfaceTextColor)),
+          border: Border.all(width: 2, color: onSurface)),
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Text(
         notanswered,
         style: const TextStyle(
-          color: onSurfaceTextColor,
+          color: onSurface,
           fontWeight: FontWeight.bold,
         ),
       ),

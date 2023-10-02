@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/firebase/refrences.dart';
 import 'package:quizapp/models/question_model.dart';
@@ -36,7 +37,7 @@ class FirebaseStorageController extends GetxController {
       onCancel: () {},
       title: "",
       middleText: "Are you sure you want to go out?",
-      backgroundColor: onSurfaceTextColor,
+      backgroundColor: onSurface,
       titleStyle: const TextStyle(color: Colors.indigo),
       middleTextStyle: const TextStyle(color: Colors.indigo),
     );

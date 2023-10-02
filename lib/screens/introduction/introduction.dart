@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
 
@@ -12,8 +13,8 @@ class IntroductionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(
-        gradient: toggleMode(),
+      decoration:  BoxDecoration(
+       color: onSurface.withOpacity(0.8),
       ),
       padding: EdgeInsets.symmetric(horizontal: Get.width * 0.2),
       alignment: Alignment.center,
@@ -25,14 +26,13 @@ class IntroductionScreen extends StatelessWidget {
             height: 50.0,
             width: 50.0,
           ),
-            Text(
-           S.of(context).introduction,
+          Text(
+            S.of(context).introduction,
             textAlign: TextAlign.start,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: onSurfaceTextColor,
-            ),
+            style: Theme.of(context)
+                .textTheme
+                .titleSmall!
+                .copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 40.0,

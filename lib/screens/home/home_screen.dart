@@ -5,8 +5,10 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
+import 'package:quizapp/controller/theme_controller.dart';
 import 'package:quizapp/generated/l10n.dart';
 import 'package:quizapp/screens/home/menu_screen.dart';
 import 'package:quizapp/screens/home/quiz_card.dart';
@@ -17,23 +19,23 @@ class HomeScreen extends GetView<FirebaseStorageController> {
   static const String routName = '/home';
   @override
   Widget build(BuildContext context) {
+     var themeController = Get.put(ThemeController());
     return WillPopScope(
       onWillPop: controller.exitDialog,
       child: Scaffold(
-        backgroundColor: Colors.deepPurple[400],
-        body: GetBuilder<FirebaseStorageController>(
-          builder: (_) {
-            return ZoomDrawer(
+        //backgroundColor: themeController.isDarkMode? onSecondary : onDarkSurface,
+        body: ZoomDrawer(
               //  slideWidth: MediaQuery.of(context).size.width * 0.5,
               borderRadius: 20.0,
-              showShadow: true,
-              controller: _.zoomDrawerController,
+              showShadow: false,
+              controller: controller.zoomDrawerController,
               isRtl: false,
-              angle: 0.0,
+              angle: -8.0,
               menuScreen: const MenuScreen(),
               mainScreen: Container(
-                decoration: BoxDecoration(
-                  gradient: toggleMode(),
+                decoration: const BoxDecoration(
+                  color: onSurface
+                  // gradient: toggleMode(),
                 ),
                 child: SafeArea(
                   child: Column(
@@ -72,7 +74,7 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                   Text(
+                                  Text(
                                     S.of(context).englishQuizText,
                                     style: const TextStyle(
                                         color: Colors.white, fontSize: 16),
@@ -85,8 +87,8 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                                 ],
                               ),
                             ),
-                             Padding(
-                              padding: EdgeInsets.only(left: 8),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8),
                               child: Text(
                                 S.of(context).makeYourSpeechLiveText,
                                 style: const TextStyle(
@@ -124,9 +126,8 @@ class HomeScreen extends GetView<FirebaseStorageController> {
                   ),
                 ),
               ),
-            );
-          },
-        ),
+            ),
+         
       ),
     );
   }

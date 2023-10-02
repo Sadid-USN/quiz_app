@@ -10,9 +10,7 @@ class SplashScreen extends StatelessWidget {
       //1:48
       backgroundColor: const Color(0xff191928),
       body: Container(
-        decoration: BoxDecoration(
-          gradient: toggleMode(),
-        ),
+        
         alignment: Alignment.center,
         child: Lottie.asset(
           width: 300,

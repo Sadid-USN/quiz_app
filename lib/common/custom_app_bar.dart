@@ -5,6 +5,7 @@ import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
 import 'package:quizapp/configs/themes/custom_textstyle.dart';
 import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/controller/question_paper/qustions_comtroller.dart';
 import 'package:quizapp/screens/test_overview_screen.dart';
 import 'package:quizapp/widgets/app_circul_button.dart';
@@ -66,7 +67,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         AppAssets.muneLeft,
                         color: Get.isDarkMode
                             ? startPrimaryDarkColor
-                            : onSurfaceTextColor,
+                            : onSurface,
                         height: 40,
                         width: 40,
                       ),

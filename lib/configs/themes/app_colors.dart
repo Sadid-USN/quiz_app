@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:quizapp/configs/themes/dark_end_light_theme.dart';
 import 'package:quizapp/configs/themes/ui_parameters.dart';
 
-const onSurfaceTextColor = Colors.white;
-const correctAnswerColor = Color.fromARGB(255, 142, 226, 141);
-const wrongAnswerColor = Color.fromARGB(255, 218, 15, 0);
-var notAnsweredColor = Colors.white.withOpacity(0.5);
-var notAnsweredColorText =
-    const Color.fromARGB(255, 53, 63, 251).withOpacity(0.5);
+// const onSurfaceTextColor = Colors.white;
+// const correctAnswerColor = Color.fromARGB(255, 142, 226, 141);
+// const wrongAnswerColor = Color.fromARGB(255, 218, 15, 0);
+// var notAnsweredColor = Colors.white.withOpacity(0.5);
+// var notAnsweredColorText =
+//     const Color.fromARGB(255, 53, 63, 251).withOpacity(0.5);
 
 const lightGradient = LinearGradient(
   begin: Alignment.topLeft,

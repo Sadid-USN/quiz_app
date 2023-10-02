@@ -26,8 +26,11 @@ class QuizCard extends GetView<FirebaseStorageController> {
         color: bodyDarkTextColor,
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: const [
-          BoxShadow(
-              color: Colors.black26, offset: Offset(3.0, 3.0), blurRadius: 6.0),
+          // BoxShadow(
+          //   color: Colors.black26,
+          //   offset: Offset(3.0, 3.0),
+          //   blurRadius: 6.0,
+          // ),
         ],
       ),
       child: InkWell(
@@ -83,14 +86,14 @@ class QuizCard extends GetView<FirebaseStorageController> {
                           children: [
                             Text(
                               model.title,
-                              style: cardTitle(context),
+                              style: Theme.of(context).textTheme.titleSmall
                             ),
                             const SizedBox(
                               height: 8,
                             ),
                             Text(
                               model.description,
-                              style: const TextStyle(fontSize: 16),
+                           style:  Theme.of(context).textTheme.titleSmall,
                             ),
                             const SizedBox(
                               height: 8,
@@ -98,14 +101,11 @@ class QuizCard extends GetView<FirebaseStorageController> {
                             AppIconAndText(
                               text_1: Text(
                                 ' Вопросов ${model.questionCount} ',
-                                style: const TextStyle(fontSize: 14),
+                                style: Theme.of(context).textTheme.titleSmall,
                               ),
                               text_2: Text(
                                 ' ${model.timeInMinits()}',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.blueGrey[800],
-                                ),
+                                style:  Theme.of(context).textTheme.titleSmall,
                               ),
                             ),
                           ],

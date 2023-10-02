@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 
 class MyField extends StatelessWidget {
   final String label;
@@ -38,9 +39,9 @@ class MyField extends StatelessWidget {
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.0),
-          borderSide: const BorderSide(
+          borderSide:  const BorderSide(
             width: 2.0,
-            color: onSurfaceTextColor,
+            color: onSurface,
           ),
         ),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
@@ -52,7 +53,7 @@ class MyField extends StatelessWidget {
             label,
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .displayLarge!
                 .copyWith(color: Colors.white, fontSize: 18),
           ),
         ),
@@ -66,7 +67,7 @@ class MyField extends StatelessWidget {
         hintText: hintText,
         hintStyle: Theme.of(context)
             .textTheme
-            .headline1!
+            .displayLarge!
             .copyWith(color: Colors.white38, fontSize: 15.0),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.0),

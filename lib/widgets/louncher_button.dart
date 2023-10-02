@@ -7,13 +7,13 @@ class LouncherButton extends StatelessWidget {
     required this.icon,
     required this.size,
     required this.label,
-    required this.color,
+ 
     required this.onPressed,
     this.padding = 0.0,
     this.isPadding = false,
   }) : super(key: key);
   final IconData icon;
-  final Color color;
+
   final double? size;
   final double padding;
   final String label;
@@ -29,12 +29,12 @@ class LouncherButton extends StatelessWidget {
             icon: Icon(
               icon,
               size: size,
-              color: color,
+           
             ),
             label: const Text('')),
         Text(
           label,
-          style: const TextStyle(color: onSurfaceTextColor, fontSize: 14),
+          // style: const TextStyle(color: onSurfaceTextColor, fontSize: 14),
         ),
       ],
     );

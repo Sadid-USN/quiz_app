@@ -8,5 +8,6 @@
   "signOut": "Sign out",
   "loginAccount": "Please login to your account",
   "great": "Great!",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "theme": "Theme"
 }

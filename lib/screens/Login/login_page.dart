@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quizapp/configs/assets/assets_svg.dart';
 import 'package:quizapp/configs/themes/app_colors.dart';
+import 'package:quizapp/configs/themes/theme.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/functions/validator.dart';
 import 'package:quizapp/generated/l10n.dart';
@@ -41,7 +42,7 @@ class LoginPage extends GetView<AuthController> {
                 const Text(
                   'Login With Email Or Google',
                   style: TextStyle(
-                      color: onSurfaceTextColor, fontWeight: FontWeight.bold),
+                      color: onSurface, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 20.0,

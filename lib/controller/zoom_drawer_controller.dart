@@ -4,6 +4,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:quizapp/controller/auth_controller.dart';
 import 'package:quizapp/controller/question_paper/storage_controller.dart';
+import 'package:quizapp/controller/theme_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -11,6 +12,9 @@ class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
   Rxn<User?> user = Rxn();
   late YoutubePlayerController controller;
+
+
+    ThemeController get themeController => Get.find<ThemeController>();
 
   @override
   void onReady() {
